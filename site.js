@@ -100,3 +100,17 @@ if (siteHeader && navToggle && navDrawer) {
     }
   });
 }
+
+// SIMPLIFIED LOADER LOGIC
+window.addEventListener("load", () => {
+  const loader = document.getElementById("site-loader");
+  if (loader) {
+    // Small delay for premium feel
+    setTimeout(() => {
+      loader.classList.add("loaded");
+      // Optional: mark hero as active for a reveal animation if needed
+      const hero = document.getElementById("hero");
+      if (hero) hero.classList.add("active");
+    }, 1000);
+  }
+});
