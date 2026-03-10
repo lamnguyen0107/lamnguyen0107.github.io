@@ -21,7 +21,7 @@
   <div class="ambient" aria-hidden="true"></div>
 
   <div class="capture-frame">
-    <header class="site-header glass-panel" style="margin-top: 2vh; border-radius: 999px;">
+    <header class="site-header glass-panel">
       <a class="brand brand-logo" href="#hero" aria-label="Lam Nguyen - Home">
         <span class="logo-ln" aria-hidden="true">LN</span>
         <span class="logo-avatar" aria-hidden="true"></span>
@@ -39,9 +39,24 @@
           <a href="#works">Projects</a>
           <a href="#about">About</a>
         </nav>
-        <a class="btn btn-secondary nav-cta"
+        <a class="btn-glass btn-download nav-cta"
           href="https://drive.google.com/uc?export=download&id=1Qmeu45utRJN4pyows9eKh-BqbHtrgn5F" target="_blank"
-          rel="noopener noreferrer">Download my resume</a>
+          rel="noopener noreferrer">
+          <div class="btn-text-wrap">
+            <span>Download Résumé</span>
+            <span>Download Résumé</span>
+          </div>
+          <div class="btn-glass-circle"
+            style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="lucide lucide-download">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" x2="12" y1="15" y2="3" />
+            </svg>
+          </div>
+        </a>
       </div>
     </header>
 
@@ -50,54 +65,60 @@
         <div class="bloom-gradient bloom-orange"></div>
         <div class="bloom-gradient bloom-moss" style="right: 5vw; bottom: 0;"></div>
 
-        <p class="eyebrow">UI/UX Designer | Ho Chi Minh City, Vietnam</p>
-        <h1 style="margin-bottom: 2vh;"><span class="text-gradient">I design</span> clear digital experiences that drive
-          growth.</h1>
-        <p class="hero-copy" style="max-width: 600px;">I am Lam Nguyen, a UI/UX Designer focused on web and mobile
-          products with a conversion mindset. I turn complex requirements into clear flows, practical interfaces, and
-          scalable UI systems.</p>
+        <div class="hero-layout">
+          <div class="hero-content">
+            <p class="eyebrow">UI/UX Designer | Ho Chi Minh City, Vietnam</p>
+            <h1 style="margin-bottom: 2vh; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1;">Designing <span
+                class="text-gradient">digital products</span> that make things feel simple.</h1>
+            <p class="hero-copy" style="max-width: 600px; font-size: 1.1rem; line-height: 1.6;">Hi, I am Lam Nguyen,
+              a UI/UX designer who enjoys turning messy ideas into clear interfaces. I focus on usability, product
+              thinking, and making things actually work for users.</p>
 
-        <!-- 3D Spinning Container -->
-        <div id="hero-3d-container"
-          style="width: 100%; height: 400px; margin-top: 2rem; position: relative; display: flex; justify-content: center; align-items: center; z-index: 1;">
-        </div>
-        <div class="hero-actions" style="margin-top: 3vh;">
-          <a class="btn-glass" href="#works">
-            <div class="btn-text-wrap">
-              <span>View Projects</span>
-              <span>View Projects</span>
+            <div class="hero-actions" style="margin-top: 5vh; display: flex; gap: 1rem;">
+              <a class="btn-glass btn-view-projects" href="#works">
+                <div class="btn-text-wrap">
+                  <span>View Projects</span>
+                  <span>View Projects</span>
+                </div>
+                <div class="btn-glass-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide-arrow-right">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </a>
+              <a class="btn-glass btn-contact" href="#contact">
+                <div class="btn-text-wrap">
+                  <span>Contact</span>
+                  <span>Contact</span>
+                </div>
+                <div class="btn-glass-circle"
+                  style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide-arrow-right">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
+              </a>
             </div>
-            <div class="btn-glass-circle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="button-icon-180">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </div>
-          </a>
-          <a class="btn-glass" href="#contact">
-            <div class="btn-text-wrap">
-              <span>Contact</span>
-              <span>Contact</span>
-            </div>
-            <div class="btn-glass-circle"
-              style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="button-icon-180">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </div>
-          </a>
+          </div>
+
+          <div class="hero-3d-wrapper">
+            <!-- 3D Spinning Container -->
+            <div id="hero-3d-container"
+              style="width: 100%; height: 60vh; min-height: 450px; position: relative; z-index: 1;"></div>
+          </div>
         </div>
       </section>
 
       <section id="works" class="section reveal">
         <div class="section-head">
           <p class="eyebrow">Selected Works</p>
-          <h2>Four projects. Clear impact.</h2>
+          <h2>Design in Practice</h2>
         </div>
 
         <div class="works-grid">
@@ -116,8 +137,8 @@
                 </div>
                 <a class="project-link-icon" href="https://dymmedicalcenter.com.vn" target="_blank"
                   rel="noopener noreferrer" aria-label="Open DYM Medical Center project">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="lucide-arrow-right">
+                    <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -143,8 +164,8 @@
                 </div>
                 <a class="project-link-icon" href="https://www.quynhonsearesort.vn/" target="_blank"
                   rel="noopener noreferrer" aria-label="Open Quy Nhon Sea Resort project">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="lucide-arrow-right">
+                    <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -170,8 +191,8 @@
                 </div>
                 <a class="project-link-icon" href="https://www.fofhcm.com/" target="_blank" rel="noopener noreferrer"
                   aria-label="Open Friends of Figma HCMC project">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="lucide-arrow-right">
+                    <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -197,8 +218,8 @@
                 </div>
                 <a class="project-link-icon" href="https://lamnguyens-portfolio.webflow.io/work/saigon-metro"
                   target="_blank" rel="noopener noreferrer" aria-label="Open Saigon Metro project">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                  <svg viewBox="0 0 24 24" aria-hidden="true" class="lucide-arrow-right">
+                    <path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -215,7 +236,7 @@
       <section id="about" class="section reveal">
         <div class="section-head">
           <p class="eyebrow">About / Experience</p>
-          <h2>Product thinking over decoration.</h2>
+          <h2>My Design Approach</h2>
         </div>
 
         <div class="about-grid about-3col">
@@ -271,9 +292,10 @@
       <section id="contact" class="section contact reveal">
         <p class="eyebrow">Contact</p>
         <h2>Have a project? Let's talk.</h2>
-        <p class="contact-status">Status: Open to work - Available for freelance</p>
+        <p class="contact-status">Sometimes it works, sometimes it takes a few iterations.
+          But that's the fun part.</p>
         <div class="hero-actions" style="margin-top: 3vh;">
-          <a class="btn-glass" href="mailto:lamnguyen051101@gmail.com">
+          <a class="btn-glass btn-contact" href="mailto:lamnguyen051101@gmail.com">
             <div class="btn-text-wrap">
               <span>Email</span>
               <span>Email</span>
@@ -281,13 +303,13 @@
             <div class="btn-glass-circle">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="button-icon-180">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
+                class="lucide-arrow-right">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
               </svg>
             </div>
           </a>
-          <a class="btn-glass" href="https://www.linkedin.com/in/lamnguyen0107" target="_blank"
+          <a class="btn-glass btn-contact" href="https://www.linkedin.com/in/lamnguyen0107" target="_blank"
             rel="noopener noreferrer">
             <div class="btn-text-wrap">
               <span>LinkedIn</span>
@@ -297,9 +319,9 @@
               style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="button-icon-180">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
+                class="lucide-arrow-right">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
               </svg>
             </div>
           </a>

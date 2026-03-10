@@ -11,37 +11,54 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
 
-        // Create a 3D Geometry (Icosahedron looks premium and tech-focused)
-        const geometry = new THREE.IcosahedronGeometry(12, 1); // Radius 12, Detail 1
+        // Create an organic "Metallic Leaf/Forest" abstract geometry
+        // We use a TorusKnot for an intricate, elegant flowing shape
+        const geometry1 = new THREE.TorusKnotGeometry(8, 2.5, 200, 32, 2, 3);
+        const geometry2 = new THREE.TorusKnotGeometry(5, 1.5, 100, 16, 3, 4);
 
-        // Solid glass material matching the brand Orange
-        const glassMaterial = new THREE.MeshPhysicalMaterial({
-            color: 0xff8c00, // Orange accent
-            metalness: 0.1,
-            roughness: 0.2,
-            transmission: 0.9, // glass like
+        // Materials matching Brand Colors with a metallic, sophisticated vibe
+        const orangeMetallic = new THREE.MeshPhysicalMaterial({
+            color: 0xff8c00,
+            metalness: 0.8,
+            roughness: 0.1,
+            clearcoat: 1.0,
+            clearcoatRoughness: 0.1,
+            wireframe: true,
             transparent: true,
-            opacity: 0.8,
-            wireframe: true, // Wireframe gives a cool structural look
+            opacity: 0.85
         });
 
-        const shape = new THREE.Mesh(geometry, glassMaterial);
-        scene.add(shape);
+        const mossMetallic = new THREE.MeshPhysicalMaterial({
+            color: 0x5d7a67,
+            metalness: 0.9,
+            roughness: 0.2,
+            clearcoat: 1.0,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.6
+        });
+
+        const shape1 = new THREE.Mesh(geometry1, orangeMetallic);
+        shape1.position.set(2, 2, 0);
+        scene.add(shape1);
+
+        const shape2 = new THREE.Mesh(geometry2, mossMetallic);
+        shape2.position.set(-5, -4, 5);
+        scene.add(shape2);
 
         // Adding ambient light
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
         scene.add(ambientLight);
 
-        // Adding colored directional lights for reflections
-        const pointLight = new THREE.PointLight(0xff8c00, 2, 100);
-        pointLight.position.set(10, 10, 10);
-        scene.add(pointLight);
+        // Adding colored directional lights for specular metallic reflections
+        const pointLight1 = new THREE.PointLight(0xffffff, 2, 100);
+        pointLight1.position.set(10, 20, 20);
+        scene.add(pointLight1);
 
-        const pointLight2 = new THREE.PointLight(0x5d7a67, 2, 100); // Moss Green light
-        pointLight2.position.set(-10, -10, 10);
+        const pointLight2 = new THREE.PointLight(0x5d7a67, 3, 100);
+        pointLight2.position.set(-20, -10, 10);
         scene.add(pointLight2);
-
-        camera.position.z = 30;
+        camera.position.z = 35;
 
         // Interaction vars
         let mouseX = 0;
@@ -60,16 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const animate = function () {
             requestAnimationFrame(animate);
 
-            // Constant base rotation
-            shape.rotation.x += 0.005;
-            shape.rotation.y += 0.01;
+            // Constant base rotation (Slow and elegant)
+            shape1.rotation.x += 0.002;
+            shape1.rotation.y += 0.004;
+            shape1.rotation.z += 0.001;
+
+            shape2.rotation.x -= 0.003;
+            shape2.rotation.y -= 0.005;
+            shape2.rotation.z += 0.002;
 
             // Interactive rotation smoothing
             targetX = mouseX * 0.001;
             targetY = mouseY * 0.001;
 
-            shape.rotation.x += 0.05 * (targetY - shape.rotation.x);
-            shape.rotation.y += 0.05 * (targetX - shape.rotation.y);
+            shape1.rotation.x += 0.05 * (targetY - shape1.rotation.x);
+            shape1.rotation.y += 0.05 * (targetX - shape1.rotation.y);
+
+            shape2.rotation.x += 0.05 * (targetY - shape2.rotation.x);
+            shape2.rotation.y += 0.05 * (targetX - shape2.rotation.y);
 
             renderer.render(scene, camera);
         };

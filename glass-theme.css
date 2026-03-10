@@ -26,7 +26,15 @@
 
   /* TEXT COLORS */
   --text-primary: #ffffff;
-  --text-secondary: hsla(0, 0%, 100%, 0.5);
+  --text-secondary: hsla(0, 0%, 100%, 0.7);
+  /* Improved contrast */
+  --text-muted: hsla(0, 0%, 100%, 0.4);
+
+  /* OVERRIDING STYLES.CSS TEXT VARIABLES */
+  --text: var(--text-primary);
+  --muted: var(--text-secondary);
+  --moss-700: var(--moss-light);
+  /* Make the "eyebrow" text readable */
 
   /* UTILITIES */
   --section-padding: 0 10vw;
@@ -39,7 +47,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   font-family: 'Manrope', sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -136,9 +144,9 @@ body {
 .btn-glass {
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 0.75rem;
   width: fit-content;
-  padding: 0.5vw 0.5vw 0.5vw 1.5vw;
+  padding: 0.35rem 0.35rem 0.35rem 1.25rem;
   border-radius: 999px;
   cursor: pointer;
   z-index: 2;
@@ -152,8 +160,8 @@ body {
 }
 
 .btn-glass-circle {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 100%;
   background-color: var(--orange-accent);
   /* Custom Orange Accent */
@@ -165,8 +173,30 @@ body {
 }
 
 .btn-glass:hover .btn-glass-circle {
-  transform: rotate(45deg);
   background-color: #fff;
+}
+
+/* Arrow Hover Behaviors */
+.btn-glass-circle svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-view-projects:hover .btn-glass-circle svg {
+  transform: rotate(90deg);
+  /* down */
+}
+
+.btn-contact:hover .btn-glass-circle svg {
+  transform: rotate(-45deg);
+  /* up-right */
+}
+
+.btn-download:hover .btn-glass-circle {
+  background-color: transparent !important;
+}
+
+.btn-download:hover .btn-glass-circle svg {
+  transform: translateY(3px);
 }
 
 /* Text inside Button */
@@ -199,6 +229,10 @@ h3,
 h4 {
   font-family: 'Syne', sans-serif;
   color: var(--text-primary);
+  background-image: linear-gradient(180deg, #ffffff 0%, hsla(0, 0%, 100%, 0.6) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 p {
@@ -225,4 +259,210 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* ==========================================================================
+   CARD & BUTTON OVERRIDES FOR DARK MODE CONTRAST
+   ========================================================================== */
+.project-card,
+.about-panel {
+  color: var(--text-secondary);
+  /* Ensure text inside cards doesn't use old dark colors */
+}
+
+.project-body ul,
+.timeline p,
+.about-panel p {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.project-card h3,
+.timeline-title {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.skill-tags span {
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.timeline-item {
+  border-left-color: var(--glass-border);
+}
+
+.project-card {
+  border: 1px solid var(--glass-border);
+  /* Fix flat dark border */
+}
+
+/* Card Button Hover Override */
+.project-link-icon {
+  transition: all 0.3s ease;
+}
+
+.project-link-icon svg {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-link-icon svg,
+.project-card:focus-within .project-link-icon svg {
+  transform: rotate(-45deg) !important;
+}
+
+/* ==========================================================================
+   LAYOUT UTILITIES
+   ========================================================================== */
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero-content {
+  flex: 1;
+  width: 100%;
+  z-index: 2;
+}
+
+.hero-3d-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .hero-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  /* Center Navbar Links */
+  .site-header.glass-panel {
+    position: sticky;
+    top: 10px;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+    /* Tight on the right for CTA */
+  }
+
+  .nav-drawer {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  .main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE OVERRIDES FOR GLASS THEME
+   ========================================================================== */
+@media (max-width: 680px) {
+  .site-header.glass-panel {
+    position: sticky;
+    top: 10px;
+    z-index: 50;
+    border-radius: 999px;
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem;
+  }
+
+  /* Un-pill the header when the menu opens to fit the grid correctly */
+  .site-header.glass-panel.menu-open {
+    border-radius: 24px;
+  }
+
+  /* Center texts and actions on Mobile */
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+    /* Content goes below 3D element */
+  }
+
+  .hero-3d-wrapper {
+    order: 1;
+    /* 3D element goes above Content */
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  /* Align Section Headers globally on mobile */
+  .section-head,
+  .contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Dark mode mobile menu drawer */
+  .nav-drawer {
+    background-color: var(--bg-atmosphere);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 1.5rem;
+  }
+
+  /* Dark mode hamburger toggle */
+  .nav-toggle {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    border-radius: 999px;
+    /* Match pill vibe */
+  }
+
+  .nav-drawer .main-nav a {
+    color: var(--text-secondary);
+  }
+
+  .nav-drawer .main-nav a:hover,
+  .nav-drawer .main-nav a:focus-visible {
+    color: var(--text-primary);
+  }
+
+  /* Enlarge mobile CTA buttons */
+  .btn-glass {
+    padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .nav-drawer .nav-cta {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0.5rem;
+    /* Ensures the icon+text group sits in the exact center */
+  }
+
+  .btn-glass-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
