@@ -1,218 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lam Nguyen - UI/UX Designer portfolio with selected works, experience, and contact.">
+  <meta name="description"
+    content="Lam Nguyen - UI/UX Designer portfolio with selected works, experience, and contact.">
   <title>Lam Nguyen | UI/UX Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./glass-theme.css">
 </head>
+
 <body>
   <div class="bg-atmosphere" aria-hidden="true"></div>
   <div class="ambient" aria-hidden="true"></div>
 
   <div class="capture-frame">
-  <header class="site-header">
-    <a class="brand brand-logo" href="#hero" aria-label="Lam Nguyen - Home">
-      <span class="logo-ln" aria-hidden="true">LN</span>
-      <span class="logo-avatar" aria-hidden="true"></span>
-    </a>
+    <header class="site-header glass-panel" style="margin-top: 2vh; border-radius: 999px;">
+      <a class="brand brand-logo" href="#hero" aria-label="Lam Nguyen - Home">
+        <span class="logo-ln" aria-hidden="true">LN</span>
+        <span class="logo-avatar" aria-hidden="true"></span>
+      </a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"
+        aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="nav-drawer" id="mobile-nav">
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#works">Projects</a>
-        <a href="#about">About</a>
-      </nav>
-      <a class="btn btn-secondary nav-cta" href="https://drive.google.com/uc?export=download&id=1Qmeu45utRJN4pyows9eKh-BqbHtrgn5F" target="_blank" rel="noopener noreferrer">Download my resume</a>
-    </div>
-  </header>
-
-  <main>
-    <section id="hero" class="section hero reveal">
-      <p class="eyebrow">UI/UX Designer | Ho Chi Minh City, Vietnam</p>
-      <h1>I design clear digital experiences that drive growth.</h1>
-      <p class="hero-copy">I am Lam Nguyen, a UI/UX Designer in Ho Chi Minh City focused on web and mobile products with a conversion mindset. I turn complex requirements into clear flows, practical interfaces, and scalable UI systems.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#works">View Projects</a>
-        <a class="btn btn-secondary" href="#contact">Contact</a>
+      <div class="nav-drawer" id="mobile-nav">
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="#works">Projects</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="btn btn-secondary nav-cta"
+          href="https://drive.google.com/uc?export=download&id=1Qmeu45utRJN4pyows9eKh-BqbHtrgn5F" target="_blank"
+          rel="noopener noreferrer">Download my resume</a>
       </div>
-    </section>
+    </header>
 
-    <section id="works" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">Selected Works</p>
-        <h2>Four projects. Clear impact.</h2>
-      </div>
+    <main>
+      <section id="hero" class="section hero reveal">
+        <div class="bloom-gradient bloom-orange"></div>
+        <div class="bloom-gradient bloom-moss" style="right: 5vw; bottom: 0;"></div>
 
-      <div class="works-grid">
-        <article id="project-dym" class="project-card reveal">
-          <div class="project-media media-dym">
-            <img src="./projects/dym-medical-center/thumbnail.png" data-fallback="https://image.thum.io/get/width/1600/https://dymmedicalcenter.com.vn" alt="DYM Medical Center thumbnail" loading="eager" decoding="async" fetchpriority="high">
-          </div>
-          <div class="project-body">
-            <div class="project-top">
-              <div>
-                <h3>DYM Medical Center Redesign Website</h3>
-                <p class="project-meta">Web Redesign | UI/UX</p>
-              </div>
-              <a class="project-link-icon" href="https://dymmedicalcenter.com.vn" target="_blank" rel="noopener noreferrer" aria-label="Open DYM Medical Center project">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+        <p class="eyebrow">UI/UX Designer | Ho Chi Minh City, Vietnam</p>
+        <h1 style="margin-bottom: 2vh;"><span class="text-gradient">I design</span> clear digital experiences that drive
+          growth.</h1>
+        <p class="hero-copy" style="max-width: 600px;">I am Lam Nguyen, a UI/UX Designer focused on web and mobile
+          products with a conversion mindset. I turn complex requirements into clear flows, practical interfaces, and
+          scalable UI systems.</p>
+
+        <!-- 3D Spinning Container -->
+        <div id="hero-3d-container"
+          style="width: 100%; height: 400px; margin-top: 2rem; position: relative; display: flex; justify-content: center; align-items: center; z-index: 1;">
+        </div>
+        <div class="hero-actions" style="margin-top: 3vh;">
+          <a class="btn-glass" href="#works">
+            <div class="btn-text-wrap">
+              <span>View Projects</span>
+              <span>View Projects</span>
             </div>
-            <ul>
-              <li>Simplified service structure for faster decisions.</li>
-              <li>Improved campaign-to-booking conversion flow.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article id="project-resort" class="project-card reveal">
-          <div class="project-media media-resort">
-            <img src="./projects/quy-nhon-sea-resort/thumbnail.png" data-fallback="https://image.thum.io/get/width/1600/https://www.quynhonsearesort.vn/" alt="Quy Nhon Sea Resort thumbnail" loading="eager" decoding="async">
-          </div>
-          <div class="project-body">
-            <div class="project-top">
-              <div>
-                <h3>Quy Nhon Sea Resort Website</h3>
-                <p class="project-meta">Web Redesign | UI/UX</p>
-              </div>
-              <a class="project-link-icon" href="https://www.quynhonsearesort.vn/" target="_blank" rel="noopener noreferrer" aria-label="Open Quy Nhon Sea Resort project">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+            <div class="btn-glass-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="button-icon-180">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
             </div>
-            <ul>
-              <li>Optimized room discovery and booking journey.</li>
-              <li>Balanced resort mood with conversion-first layout.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article id="project-fof" class="project-card reveal">
-          <div class="project-media media-fof">
-            <img src="./projects/friends-of-figma-hcmc/thumbnail.png" data-fallback="https://image.thum.io/get/width/1600/https://www.fofhcm.com/" alt="Friends of Figma HCMC thumbnail" loading="lazy" decoding="async">
-          </div>
-          <div class="project-body">
-            <div class="project-top">
-              <div>
-                <h3>Friends of Figma HCMC</h3>
-                <p class="project-meta">Web Design | Visual UI</p>
-              </div>
-              <a class="project-link-icon" href="https://www.fofhcm.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Friends of Figma HCMC project">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+          </a>
+          <a class="btn-glass" href="#contact">
+            <div class="btn-text-wrap">
+              <span>Contact</span>
+              <span>Contact</span>
             </div>
-            <ul>
-              <li>Built a bold editorial visual direction.</li>
-              <li>Kept storytelling pages clear and readable.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article id="project-metro" class="project-card reveal">
-          <div class="project-media media-metro">
-            <img src="./projects/saigon-metro/thumbnail.png" data-fallback="https://image.thum.io/get/width/1600/https://lamnguyens-portfolio.webflow.io/work/saigon-metro" alt="Saigon Metro thumbnail" loading="lazy" decoding="async">
-          </div>
-          <div class="project-body">
-            <div class="project-top">
-              <div>
-                <h3>Saigon Metro</h3>
-                <p class="project-meta">Mobile App Case Study | UX Study</p>
-              </div>
-              <a class="project-link-icon" href="https://lamnguyens-portfolio.webflow.io/work/saigon-metro" target="_blank" rel="noopener noreferrer" aria-label="Open Saigon Metro project">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
+            <div class="btn-glass-circle"
+              style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="button-icon-180">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
             </div>
-            <ul>
-              <li>Mapped commuter pain points end-to-end.</li>
-              <li>Proposed clearer route and wayfinding UX.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+          </a>
+        </div>
+      </section>
 
-    <section id="about" class="section reveal">
-      <div class="section-head">
-        <p class="eyebrow">About / Experience</p>
-        <h2>Product thinking over decoration.</h2>
-      </div>
+      <section id="works" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Selected Works</p>
+          <h2>Four projects. Clear impact.</h2>
+        </div>
 
-      <div class="about-grid about-3col">
-        <article class="about-panel about-col">
-          <h3>About</h3>
-          <p>I work with a systems mindset and close collaboration across product, marketing, and engineering. My strength is translating unclear requirements into clear UX structure, practical UI decisions, and measurable outcomes.</p>
-          <div class="skill-tags">
-            <span>UX Research</span>
-            <span>Product Thinking</span>
-            <span>UI Systems</span>
-            <span>Wireframing</span>
-            <span>Interaction Design</span>
-            <span>Prototyping</span>
-            <span>Conversion Optimization</span>
-          </div>
-        </article>
-
-        <article class="about-panel experience-col">
-          <h3>Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <span class="company-logo logo-dym" aria-hidden="true">DYM</span>
-                <p class="timeline-title">Multimedia Designer | DYM Medical Center Vietnam | 2024 - 2025</p>
-              </div>
-              <p>Redesigned DYM website, produced landing pages, and supported marketing campaigns for business growth.</p>
+        <div class="works-grid">
+          <div class="bloom-gradient bloom-moss" style="left: -10vw; top: 20vh; opacity: 0.5;"></div>
+          <article id="project-dym" class="project-card glass-panel reveal">
+            <div class="project-media media-dym">
+              <img src="./projects/dym-medical-center/thumbnail.png"
+                data-fallback="https://image.thum.io/get/width/1600/https://dymmedicalcenter.com.vn"
+                alt="DYM Medical Center thumbnail" loading="eager" decoding="async" fetchpriority="high">
             </div>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <span class="company-logo logo-mltech" aria-hidden="true">ML</span>
-                <p class="timeline-title">UI/UX Designer | MLTech Soft | 2023 - 2024</p>
+            <div class="project-body">
+              <div class="project-top">
+                <div>
+                  <h3>DYM Medical Center Redesign Website</h3>
+                  <p class="project-meta">Web Redesign | UI/UX</p>
+                </div>
+                <a class="project-link-icon" href="https://dymmedicalcenter.com.vn" target="_blank"
+                  rel="noopener noreferrer" aria-label="Open DYM Medical Center project">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </div>
-              <p>Created user flows, wireframes, and prototypes; supported workshops and design validation with clients.</p>
+              <ul>
+                <li>Simplified service structure for faster decisions.</li>
+                <li>Improved campaign-to-booking conversion flow.</li>
+              </ul>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <span class="company-logo logo-freelance" aria-hidden="true">LN</span>
-                <p class="timeline-title">UI/UX Designer | Freelance | 2024 - Present</p>
+          </article>
+
+          <article id="project-resort" class="project-card glass-panel reveal">
+            <div class="project-media media-resort">
+              <img src="./projects/quy-nhon-sea-resort/thumbnail.png"
+                data-fallback="https://image.thum.io/get/width/1600/https://www.quynhonsearesort.vn/"
+                alt="Quy Nhon Sea Resort thumbnail" loading="eager" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <div>
+                  <h3>Quy Nhon Sea Resort Website</h3>
+                  <p class="project-meta">Web Redesign | UI/UX</p>
+                </div>
+                <a class="project-link-icon" href="https://www.quynhonsearesort.vn/" target="_blank"
+                  rel="noopener noreferrer" aria-label="Open Quy Nhon Sea Resort project">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </div>
-              <p>Delivered websites, branding assets, and product interfaces for SMEs with a focus on conversion.</p>
+              <ul>
+                <li>Optimized room discovery and booking journey.</li>
+                <li>Balanced resort mood with conversion-first layout.</li>
+              </ul>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
+          </article>
 
-    <section id="contact" class="section contact reveal">
-      <p class="eyebrow">Contact</p>
-      <h2>Have a project? Let's talk.</h2>
-      <p class="contact-status">Status: Open to work - Available for freelance</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:lamnguyen051101@gmail.com">Email</a>
-        <a class="btn btn-secondary" href="https://www.linkedin.com/in/lamnguyen0107" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn btn-secondary" href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a>
-      </div>
-    </section>
-  </main>
+          <article id="project-fof" class="project-card glass-panel reveal">
+            <div class="project-media media-fof">
+              <img src="./projects/friends-of-figma-hcmc/thumbnail.png"
+                data-fallback="https://image.thum.io/get/width/1600/https://www.fofhcm.com/"
+                alt="Friends of Figma HCMC thumbnail" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <div>
+                  <h3>Friends of Figma HCMC</h3>
+                  <p class="project-meta">Web Design | Visual UI</p>
+                </div>
+                <a class="project-link-icon" href="https://www.fofhcm.com/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Open Friends of Figma HCMC project">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <ul>
+                <li>Built a bold editorial visual direction.</li>
+                <li>Kept storytelling pages clear and readable.</li>
+              </ul>
+            </div>
+          </article>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Lam Nguyen</p>
-  </footer>
+          <article id="project-metro" class="project-card glass-panel reveal">
+            <div class="project-media media-metro">
+              <img src="./projects/saigon-metro/thumbnail.png"
+                data-fallback="https://image.thum.io/get/width/1600/https://lamnguyens-portfolio.webflow.io/work/saigon-metro"
+                alt="Saigon Metro thumbnail" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <div>
+                  <h3>Saigon Metro</h3>
+                  <p class="project-meta">Mobile App Case Study | UX Study</p>
+                </div>
+                <a class="project-link-icon" href="https://lamnguyens-portfolio.webflow.io/work/saigon-metro"
+                  target="_blank" rel="noopener noreferrer" aria-label="Open Saigon Metro project">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17L17 7M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <ul>
+                <li>Mapped commuter pain points end-to-end.</li>
+                <li>Proposed clearer route and wayfinding UX.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">About / Experience</p>
+          <h2>Product thinking over decoration.</h2>
+        </div>
+
+        <div class="about-grid about-3col">
+          <div class="bloom-gradient bloom-orange"
+            style="right: -5vw; top: 10vh; opacity: 0.3; width: 30vw; height: 30vw;"></div>
+          <article class="about-panel about-col glass-panel">
+            <h3>About</h3>
+            <p>I work with a systems mindset and close collaboration across product, marketing, and engineering. My
+              strength is translating unclear requirements into clear UX structure, practical UI decisions, and
+              measurable outcomes.</p>
+            <div class="skill-tags">
+              <span>UX Research</span>
+              <span>Product Thinking</span>
+              <span>UI Systems</span>
+              <span>Wireframing</span>
+              <span>Interaction Design</span>
+              <span>Prototyping</span>
+              <span>Conversion Optimization</span>
+            </div>
+          </article>
+
+          <article class="about-panel experience-col glass-panel">
+            <h3>Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <span class="company-logo logo-dym" aria-hidden="true">DYM</span>
+                  <p class="timeline-title">Multimedia Designer | DYM Medical Center Vietnam | 2024 - 2025</p>
+                </div>
+                <p>Redesigned DYM website, produced landing pages, and supported marketing campaigns for business
+                  growth.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <span class="company-logo logo-mltech" aria-hidden="true">ML</span>
+                  <p class="timeline-title">UI/UX Designer | MLTech Soft | 2023 - 2024</p>
+                </div>
+                <p>Created user flows, wireframes, and prototypes; supported workshops and design validation with
+                  clients.</p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <span class="company-logo logo-freelance" aria-hidden="true">LN</span>
+                  <p class="timeline-title">UI/UX Designer | Freelance | 2024 - Present</p>
+                </div>
+                <p>Delivered websites, branding assets, and product interfaces for SMEs with a focus on conversion.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a project? Let's talk.</h2>
+        <p class="contact-status">Status: Open to work - Available for freelance</p>
+        <div class="hero-actions" style="margin-top: 3vh;">
+          <a class="btn-glass" href="mailto:lamnguyen051101@gmail.com">
+            <div class="btn-text-wrap">
+              <span>Email</span>
+              <span>Email</span>
+            </div>
+            <div class="btn-glass-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="button-icon-180">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+          <a class="btn-glass" href="https://www.linkedin.com/in/lamnguyen0107" target="_blank"
+            rel="noopener noreferrer">
+            <div class="btn-text-wrap">
+              <span>LinkedIn</span>
+              <span>LinkedIn</span>
+            </div>
+            <div class="btn-glass-circle"
+              style="background-color: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="button-icon-180">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Lam Nguyen</p>
+    </footer>
   </div>
 
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
   <script src="./site.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./three-scene.js"></script>
 </body>
+
 </html>
-
-
-
-
-
