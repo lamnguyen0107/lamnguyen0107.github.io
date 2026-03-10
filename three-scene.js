@@ -5,110 +5,129 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
 
         renderer.setSize(container.clientWidth, container.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
 
-        // Create an organic "Metallic Leaf/Forest" abstract geometry
-        // We use a TorusKnot for an intricate, elegant flowing shape
-        const geometry1 = new THREE.TorusKnotGeometry(8, 2.5, 200, 32, 2, 3);
-        const geometry2 = new THREE.TorusKnotGeometry(5, 1.5, 100, 16, 3, 4);
+        // Core Group to hold the nested shapes
+        const coreGroup = new THREE.Group();
+        scene.add(coreGroup);
 
-        // Materials matching Brand Colors with a metallic, sophisticated vibe
+        // --- SHAPE 1: The "Curly" Knot ---
+        const geometry1 = new THREE.TorusKnotGeometry(4.95, 1.54, 250, 50, 3, 4);
         const orangeMetallic = new THREE.MeshPhysicalMaterial({
             color: 0xff8c00,
-            metalness: 0.8,
-            roughness: 0.1,
+            emissive: 0x442200,
+            metalness: 1.0,
+            roughness: 0.15,
             clearcoat: 1.0,
             clearcoatRoughness: 0.1,
-            wireframe: true,
-            transparent: true,
-            opacity: 0.85
+            side: THREE.FrontSide
         });
+        const shape1 = new THREE.Mesh(geometry1, orangeMetallic);
+        coreGroup.add(shape1);
 
+        // --- SHAPE 2: The "Hexagonal" Outer Cage ---
+        // Using Icosahedron with 0 detail produces a large faceted geometric shape
+        // Radius 11 ensures it NEVER touches shape1 (which is approx radius 6.5)
+        const geometry2 = new THREE.IcosahedronGeometry(11, 0);
         const mossMetallic = new THREE.MeshPhysicalMaterial({
             color: 0x5d7a67,
-            metalness: 0.9,
+            metalness: 0.8,
             roughness: 0.2,
-            clearcoat: 1.0,
             wireframe: true,
             transparent: true,
-            opacity: 0.6
+            opacity: 0.6,
+            emissive: 0x112211,
+            emissiveIntensity: 0.7
         });
-
-        const shape1 = new THREE.Mesh(geometry1, orangeMetallic);
-        shape1.position.set(2, 2, 0);
-        scene.add(shape1);
-
         const shape2 = new THREE.Mesh(geometry2, mossMetallic);
-        shape2.position.set(-5, -4, 5);
-        scene.add(shape2);
+        coreGroup.add(shape2);
 
-        // Adding ambient light
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-        scene.add(ambientLight);
+        // Add a subtle inner wireframe to shape1
+        const shape1WireMat = new THREE.MeshBasicMaterial({
+            color: 0xffffff, wireframe: true, transparent: true, opacity: 0.1
+        });
+        const shape1Wire = new THREE.Mesh(geometry1, shape1WireMat);
+        shape1.add(shape1Wire);
 
-        // Adding colored directional lights for specular metallic reflections
-        const pointLight1 = new THREE.PointLight(0xffffff, 2, 100);
-        pointLight1.position.set(10, 20, 20);
-        scene.add(pointLight1);
+        // Responsive Spacing: Keep it centered but adjust camera
+        const updateLayout = () => {
+            const isMobile = window.innerWidth < 680;
+            if (isMobile) {
+                coreGroup.position.set(0, 0, 0);
+                camera.position.z = 29; // Closer for bigger feel on mobile
+            } else {
+                coreGroup.position.set(0, 0, 0);
+                camera.position.z = 24;
+            }
+        };
+        updateLayout();
 
-        const pointLight2 = new THREE.PointLight(0x5d7a67, 3, 100);
-        pointLight2.position.set(-20, -10, 10);
-        scene.add(pointLight2);
-        camera.position.z = 35;
+        // Particles
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 150;
+        const posArray = new Float32Array(particlesCount * 3);
+        for (let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 60;
+        }
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.12, color: 0xffffff, transparent: true, opacity: 0.4
+        });
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particlesMesh);
 
-        // Interaction vars
-        let mouseX = 0;
-        let mouseY = 0;
-        let targetX = 0;
-        let targetY = 0;
+        // Lighting
+        scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+        const p1 = new THREE.PointLight(0xffffff, 2.5, 120);
+        p1.position.set(20, 20, 20);
+        scene.add(p1);
+        const p2 = new THREE.PointLight(0x5d7a67, 3.5, 100);
+        p2.position.set(-20, -20, 10);
+        scene.add(p2);
 
-        const windowHalfX = window.innerWidth / 2;
-        const windowHalfY = window.innerHeight / 2;
+        // Interaction
+        let mouseX = 0, mouseY = 0;
+        const halfX = window.innerWidth / 2;
+        const halfY = window.innerHeight / 2;
 
-        document.addEventListener('mousemove', (event) => {
-            mouseX = (event.clientX - windowHalfX);
-            mouseY = (event.clientY - windowHalfY);
+        document.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX - halfX);
+            mouseY = (e.clientY - halfY);
         });
 
-        const animate = function () {
+        const animate = () => {
             requestAnimationFrame(animate);
 
-            // Constant base rotation (Slow and elegant)
-            shape1.rotation.x += 0.002;
-            shape1.rotation.y += 0.004;
-            shape1.rotation.z += 0.001;
+            // Different rotation speeds for internal/external
+            shape1.rotation.x += 0.003;
+            shape1.rotation.y += 0.005;
 
-            shape2.rotation.x -= 0.003;
-            shape2.rotation.y -= 0.005;
-            shape2.rotation.z += 0.002;
+            shape2.rotation.y -= 0.002;
+            shape2.rotation.z += 0.001;
 
-            // Interactive rotation smoothing
-            targetX = mouseX * 0.001;
-            targetY = mouseY * 0.001;
+            particlesMesh.rotation.y += 0.0005;
 
-            shape1.rotation.x += 0.05 * (targetY - shape1.rotation.x);
-            shape1.rotation.y += 0.05 * (targetX - shape1.rotation.y);
-
-            shape2.rotation.x += 0.05 * (targetY - shape2.rotation.x);
-            shape2.rotation.y += 0.05 * (targetX - shape2.rotation.y);
+            // Follow mouse with subtle tilt
+            const targetX = mouseX * 0.001;
+            const targetY = mouseY * 0.001;
+            coreGroup.rotation.x += 0.05 * (targetY - coreGroup.rotation.x);
+            coreGroup.rotation.y += 0.05 * (targetX - coreGroup.rotation.y);
 
             renderer.render(scene, camera);
         };
-
         animate();
 
-        // Handle window resize
         window.addEventListener('resize', () => {
             if (!container) return;
             camera.aspect = container.clientWidth / container.clientHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(container.clientWidth, container.clientHeight);
+            updateLayout();
         });
     };
-
     init3DElement();
 });
