@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #0b0c10;
   --surface: rgba(30, 31, 34, 0.6);
   --text: #ffffff;
@@ -681,17 +681,8 @@ h2 {
   width: 100%;
 }
 
-body.figma-capture {
-  min-width: 1440px;
-}
+body.figma-capture {`n  min-width: 1920px;`n}
 
-body.figma-capture .capture-frame {
-  width: 1440px;
-  margin: 0 auto;
-}
+body.figma-capture .capture-frame {`n  width: 1920px;`n  margin: 0 auto;`n}
 
-body.figma-capture .site-header,
-body.figma-capture main,
-body.figma-capture .site-footer {
-  width: min(1280px, calc(100% - 160px));
-}
+body.figma-capture .site-header,`nbody.figma-capture main,`nbody.figma-capture .site-footer {`n  width: min(1680px, calc(100% - 240px));`n}
