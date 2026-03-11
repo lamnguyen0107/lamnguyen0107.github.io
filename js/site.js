@@ -8,6 +8,52 @@ if (isFigmaCapture) {
   document.body.classList.add("figma-capture");
 }
 
+// -------------------------------------------------------------
+// Lenis Smooth Scrolling Initialization
+// -------------------------------------------------------------
+let lenis;
+if (!isFigmaCapture && typeof Lenis !== 'undefined') {
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+  });
+
+  // Integrate Lenis with GSAP ScrollTrigger
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    // Fallback if GSAP is not loaded
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // Handle anchor links for smooth scrolling via Lenis
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        lenis.scrollTo(target, { offset: -80 }); // offset for sticky header
+      }
+    });
+  });
+}
+
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
@@ -56,11 +102,8 @@ function attachImageFallback(img) {
 mediaItems.forEach(attachImageFallback);
 
 function applyScrollMotion() {
-  const viewportH = window.innerHeight || 1;
   const scrollY = window.scrollY || window.pageYOffset || 0;
-
   document.documentElement.style.setProperty("--ambient-shift", `${Math.min(scrollY * 0.015, 16)}px`);
-
   ticking = false;
 }
 
@@ -71,7 +114,12 @@ function onScroll() {
   }
 }
 
-window.addEventListener("scroll", onScroll, { passive: true });
+// If Lenis is active, hook the ambient shift to Lenis scroll event
+if (lenis) {
+  lenis.on('scroll', onScroll);
+} else {
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
 window.addEventListener("resize", onScroll);
 applyScrollMotion();
 

@@ -1,16 +1,16 @@
 :root {
-  --bg: #f3f5ef;
-  --surface: #fbfcf8;
-  --text: #1f2922;
-  --muted: #546258;
-  --line: #d3d9cc;
-  --moss-900: #1e3027;
-  --moss-700: #3f5b4b;
-  --moss-500: #66806e;
+  --bg: #0b0c10;
+  --surface: rgba(30, 31, 34, 0.6);
+  --text: #ffffff;
+  --muted: #9ba09d;
+  --line: rgba(255, 255, 255, 0.1);
+  --moss-900: #e46f2d;
+  --moss-700: #e46f2d;
+  --moss-500: #d65916;
   --cta: #e46f2d;
   --cta-hover: #ca5f23;
   --radius: 18px;
-  --shadow: 0 20px 60px rgba(31, 41, 34, 0.08);
+  --shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -18,7 +18,28 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Lenis overrides smooth scrolling, but this prevents native jumpiness */
+  scroll-behavior: initial;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 :focus-visible {
@@ -30,22 +51,17 @@ body {
   margin: 0;
   font-family: "Manrope", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 8% -10%, rgba(176, 196, 171, 0.42) 0, rgba(176, 196, 171, 0) 40%),
-    radial-gradient(circle at 88% 18%, rgba(151, 181, 165, 0.28) 0, rgba(151, 181, 165, 0) 44%),
-    linear-gradient(180deg, #f5f8f0 0%, #f3f5ef 100%);
+  background: var(--bg);
   line-height: 1.55;
 }
 
+/* Replaced ambient layers with a unified dark background approach */
 .bg-atmosphere {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -2;
-  background:
-    radial-gradient(circle at 8% -10%, rgba(176, 196, 171, 0.65) 0, rgba(176, 196, 171, 0) 40%),
-    radial-gradient(circle at 88% 18%, rgba(151, 181, 165, 0.42) 0, rgba(151, 181, 165, 0) 44%),
-    linear-gradient(180deg, #f5f8f0 0%, #f3f5ef 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(228, 111, 45, 0.05) 0%, transparent 60%);
 }
 
 .ambient {
@@ -71,10 +87,10 @@ body {
   width: min(1120px, 92vw);
   margin: 0.9rem auto 0;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(31, 41, 34, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  backdrop-filter: blur(8px);
-  background: rgba(251, 252, 248, 0.88);
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(15, 16, 18, 0.65);
 }
 
 .brand {
@@ -199,7 +215,11 @@ main,
 }
 
 .section {
-  padding: 8rem 0 3rem;
+  padding: 12rem 0; /* Increased padding to make scrolling longer and more premium */
+  min-height: 85vh; /* Ensure sections take more vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .eyebrow {
@@ -269,14 +289,14 @@ h2 {
 
 .btn-secondary {
   border: 1px solid var(--line);
-  color: var(--moss-900);
-  background: #ffffff;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  border-color: var(--moss-500);
-  color: var(--moss-700);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .section-head {
@@ -390,7 +410,7 @@ h2 {
 
 .project-link-icon:hover,
 .project-link-icon:focus-visible {
-  border-color: #9fb39f;
+  border-color: var(--cta);
   color: var(--cta);
 }
 
@@ -500,6 +520,11 @@ h2 {
 .timeline-title {
   margin: 0;
   font-weight: 800;
+  color: #ffffff;
+}
+
+.timeline-item p {
+  color: var(--muted);
 }
 
 .contact {

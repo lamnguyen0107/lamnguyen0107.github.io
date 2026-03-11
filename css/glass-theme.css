@@ -16,12 +16,12 @@
   --orange-accent: #ff8c00;
   --orange-glow: rgba(255, 140, 0, 0.4);
 
-  /* GLASSMORPHISM CONSTANTS */
-  --glass-bg: hsla(0, 0%, 100%, 0.025);
-  --glass-bg-hover: hsla(0, 0%, 100%, 0.05);
-  --glass-border: hsla(0, 0%, 100%, 0.075);
-  --glass-glow: hsla(0, 0%, 100%, 0.05);
-  --glass-blur: blur(10px);
+  /* GLASSMORPHISM CONSTANTS - Sharper & More Visible */
+  --glass-bg: hsla(0, 0%, 100%, 0.05); /* Increased base opacity */
+  --glass-bg-hover: hsla(0, 0%, 100%, 0.12); /* Brighter hover */
+  --glass-border: hsla(0, 0%, 100%, 0.12); /* Sharper border */
+  --glass-glow: hsla(0, 0%, 100%, 0.08); /* Stronger inner glow */
+  --glass-blur: blur(24px); /* Higher blur for frosted feel */
   --glass-radius: 25px;
 
   /* TEXT COLORS */
@@ -259,6 +259,21 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+}
+
+/* Hero Hover Effect */
+.hero-content h1 {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+.hero-content:hover h1 {
+  transform: translateY(-5px);
+}
+.hero-content:hover .text-gradient {
+  transform: scale(1.05) rotate(-2deg);
+  filter: drop-shadow(0 10px 20px var(--orange-glow));
 }
 
 /* ==========================================================================

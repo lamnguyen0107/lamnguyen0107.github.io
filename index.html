@@ -25,7 +25,10 @@
   </div>
 
   <div class="bg-atmosphere" aria-hidden="true"></div>
-  <div class="ambient" aria-hidden="true"></div>
+  <!-- <div class="ambient" aria-hidden="true"></div> -->
+
+  <!-- Full-screen 3D Background Container -->
+  <div id="hero-3d-container" style="position: fixed; inset: 0; z-index: -1; opacity: 0.8;"></div>
 
   <div class="capture-frame">
     <header class="site-header glass-panel">
@@ -75,11 +78,8 @@
         <div class="hero-layout">
           <div class="hero-content">
             <p class="eyebrow">UI/UX Designer | Ho Chi Minh City, Vietnam</p>
-            <h1 style="margin-bottom: 2vh; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1;">Designing <span
-                class="text-gradient">digital products</span> that make things feel simple.</h1>
-            <p class="hero-copy" style="max-width: 600px; font-size: 1.1rem; line-height: 1.6;">Hi, I am Lam Nguyen,
-              a UI/UX designer who enjoys turning messy ideas into clear interfaces. I focus on usability, product
-              thinking, and making things actually work for users.</p>
+            <h1 style="margin-bottom: 2vh; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1;">Designing <span class="text-gradient" style="background: linear-gradient(135deg, #ff8c00, #ffb347); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">digital products</span><br>that make things feel simple.</h1>
+            <p class="hero-copy" style="max-width: 600px; font-size: 1.1rem; line-height: 1.6;">I'm Lam Nguyen, a UI/UX Designer based in HCMC, Vietnam, focusing on web/app experiences and conversion optimization.</p>
 
             <div class="hero-actions" style="margin-top: 5vh; display: flex; gap: 1rem;">
               <a class="btn-glass btn-view-projects" href="#works">
@@ -114,11 +114,7 @@
             </div>
           </div>
 
-          <div class="hero-3d-wrapper">
-            <!-- 3D Spinning Container -->
-            <div id="hero-3d-container"
-              style="width: 100%; height: 60vh; min-height: 450px; position: relative; z-index: 1;"></div>
-          </div>
+          <!-- 3D container moved to fixed background -->
         </div>
       </section>
 
@@ -139,8 +135,8 @@
             <div class="project-body">
               <div class="project-top">
                 <div>
-                  <h3>DYM Medical Center Redesign Website</h3>
-                  <p class="project-meta">Web Redesign | UI/UX</p>
+                  <h3>DYM Medical Center</h3>
+                  <p class="project-meta">Website Redesign · UI/UX</p>
                 </div>
                 <a class="project-link-icon" href="https://dymmedicalcenter.com.vn" target="_blank"
                   rel="noopener noreferrer" aria-label="Open DYM Medical Center project">
@@ -151,8 +147,8 @@
                 </a>
               </div>
               <ul>
-                <li>Simplified service structure for faster decisions.</li>
-                <li>Improved campaign-to-booking conversion flow.</li>
+                <li>Simplified service structure to help users make faster decisions.</li>
+                <li>Improved conversion flow from campaigns to booking.</li>
               </ul>
             </div>
           </article>
@@ -166,8 +162,8 @@
             <div class="project-body">
               <div class="project-top">
                 <div>
-                  <h3>Quy Nhon Sea Resort Website</h3>
-                  <p class="project-meta">Web Redesign | UI/UX</p>
+                  <h3>Quy Nhon Sea Resort</h3>
+                  <p class="project-meta">Website Redesign · UI/UX</p>
                 </div>
                 <a class="project-link-icon" href="https://www.quynhonsearesort.vn/" target="_blank"
                   rel="noopener noreferrer" aria-label="Open Quy Nhon Sea Resort project">
@@ -178,8 +174,8 @@
                 </a>
               </div>
               <ul>
-                <li>Optimized room discovery and booking journey.</li>
-                <li>Balanced resort mood with conversion-first layout.</li>
+                <li>Optimized the room search and booking journey.</li>
+                <li>Balanced a resort-like feel with a conversion-first layout.</li>
               </ul>
             </div>
           </article>
@@ -194,7 +190,7 @@
               <div class="project-top">
                 <div>
                   <h3>Friends of Figma HCMC</h3>
-                  <p class="project-meta">Web Design | Visual UI</p>
+                  <p class="project-meta">Web Design · Visual UI</p>
                 </div>
                 <a class="project-link-icon" href="https://www.fofhcm.com/" target="_blank" rel="noopener noreferrer"
                   aria-label="Open Friends of Figma HCMC project">
@@ -205,8 +201,8 @@
                 </a>
               </div>
               <ul>
-                <li>Built a bold editorial visual direction.</li>
-                <li>Kept storytelling pages clear and readable.</li>
+                <li>Established a bold, editorial visual direction.</li>
+                <li>Kept storytelling pages clear and highly readable.</li>
               </ul>
             </div>
           </article>
@@ -221,7 +217,7 @@
               <div class="project-top">
                 <div>
                   <h3>Saigon Metro</h3>
-                  <p class="project-meta">Mobile App Case Study | UX Study</p>
+                  <p class="project-meta">Mobile App Case Study · UX Study</p>
                 </div>
                 <a class="project-link-icon" href="https://lamnguyens-portfolio.webflow.io/work/saigon-metro"
                   target="_blank" rel="noopener noreferrer" aria-label="Open Saigon Metro project">
@@ -232,8 +228,8 @@
                 </a>
               </div>
               <ul>
-                <li>Mapped commuter pain points end-to-end.</li>
-                <li>Proposed clearer route and wayfinding UX.</li>
+                <li>Mapped end-to-end commuter pain points.</li>
+                <li>Proposed clearer routing and better wayfinding.</li>
               </ul>
             </div>
           </article>
@@ -251,9 +247,7 @@
             style="right: -5vw; top: 10vh; opacity: 0.3; width: 30vw; height: 30vw;"></div>
           <article class="about-panel about-col glass-panel">
             <h3>About</h3>
-            <p>I work with a systems mindset and close collaboration across product, marketing, and engineering. My
-              strength is translating unclear requirements into clear UX structure, practical UI decisions, and
-              measurable outcomes.</p>
+            <p>I work with a systems-thinking mindset and collaborate closely with product, marketing, and engineering teams. My strength lies in translating complex requirements into clear UX structures, practical UI decisions, and measurable results.</p>
             <div class="skill-tags">
               <span>UX Research</span>
               <span>Product Thinking</span>
@@ -273,23 +267,21 @@
                   <span class="company-logo logo-dym" aria-hidden="true">DYM</span>
                   <p class="timeline-title">Multimedia Designer | DYM Medical Center Vietnam | 2024 - 2025</p>
                 </div>
-                <p>Redesigned DYM website, produced landing pages, and supported marketing campaigns for business
-                  growth.</p>
+                <p>Redesigned DYM website, produced landing pages, and supported marketing campaigns to drive business growth.</p>
               </div>
               <div class="timeline-item">
                 <div class="timeline-head">
                   <span class="company-logo logo-mltech" aria-hidden="true">ML</span>
                   <p class="timeline-title">UI/UX Designer | MLTech Soft | 2023 - 2024</p>
                 </div>
-                <p>Created user flows, wireframes, and prototypes; supported workshops and design validation with
-                  clients.</p>
+                <p>Created user flows, wireframes, and prototypes; co-facilitated workshops and validated designs with clients.</p>
               </div>
               <div class="timeline-item">
                 <div class="timeline-head">
                   <span class="company-logo logo-freelance" aria-hidden="true">LN</span>
                   <p class="timeline-title">UI/UX Designer | Freelance | 2024 - Present</p>
                 </div>
-                <p>Delivered websites, branding assets, and product interfaces for SMEs with a focus on conversion.</p>
+                <p>Designed websites, brand identities, and product interfaces for SMEs with a focus on conversion rates.</p>
               </div>
             </div>
           </article>
@@ -298,9 +290,8 @@
 
       <section id="contact" class="section contact reveal">
         <p class="eyebrow">Contact</p>
-        <h2>Have a project? Let's talk.</h2>
-        <p class="contact-status">Sometimes it works, sometimes it takes a few iterations.
-          But that's the fun part.</p>
+        <h2>Got a project? Let's talk.</h2>
+        <p class="contact-status">Sometimes it works, sometimes it takes a few iterations. But that's the fun part.</p>
         <div class="hero-actions" style="margin-top: 3vh;">
           <a class="btn-glass btn-contact" href="mailto:lamnguyen051101@gmail.com">
             <div class="btn-text-wrap">
@@ -342,6 +333,12 @@
   </div>
 
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  
+  <!-- Smooth Scrolling & Animation Libraries -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <script src="./js/site.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="./js/three-scene.js"></script>
