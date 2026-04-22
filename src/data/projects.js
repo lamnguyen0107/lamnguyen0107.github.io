@@ -1,0 +1,38 @@
+export const projects = [
+    {
+        id: "dym-medical-center",
+        title: "DYM Medical Center",
+        category: "Website Redesign",
+        meta: "UI/UX | Healthcare",
+        url: "https://dymmedicalcenter.com.vn",
+        image: "/projects/dym-medical-center/thumbnail.jpg",
+        description: "Full website redesign for a Japanese healthcare provider in Vietnam. Streamlined the patient journey and improved conversion rates.",
+    },
+    {
+        id: "quy-nhon-sea-resort",
+        title: "Quy Nhon Sea Resort",
+        category: "Website Redesign",
+        meta: "UI/UX | Hospitality",
+        url: "https://www.quynhonsearesort.vn/",
+        image: "/projects/quy-nhon-sea-resort/thumbnail.jpg",
+        description: "Redesigned the digital presence of a premium coastal resort. Focused on storytelling through immersive visuals and seamless booking flows.",
+    },
+    {
+        id: "friends-of-figma-hcmc",
+        title: "Friends of Figma HCMC",
+        category: "Web Design",
+        meta: "Visual UI | Community",
+        url: "https://www.fofhcm.com/",
+        image: "/projects/friends-of-figma-hcmc/thumbnail.jpg",
+        description: "Designed the community platform for Ho Chi Minh City's Figma design community with a vibrant visual identity.",
+    },
+    {
+        id: "saigon-metro",
+        title: "Saigon Metro",
+        category: "Mobile App",
+        meta: "UX Case Study | Transit",
+        url: "https://lamnguyens-portfolio.webflow.io/work/saigon-metro",
+        image: "/projects/saigon-metro/thumbnail.jpg",
+        description: "A comprehensive UX case study for HCMC's first metro system, focusing on intuitive wayfinding and real-time tracking.",
+    },
+];
