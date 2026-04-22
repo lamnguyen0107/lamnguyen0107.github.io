@@ -11,22 +11,37 @@ export const VideoSection = ({
   buttons,
   id,
   desaturated = false,
+  rotated = false,
+  fullWidth = true,
+  objectPosition = "center",
+  videoClassName = "",
   className = "" 
 }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (Hls.isSupported() && videoRef.current) {
+    if (!videoRef.current) return;
+
+    const isMp4 = src.toLowerCase().endsWith('.mp4');
+
+    if (isMp4) {
+      videoRef.current.src = src;
+    } else if (Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(src);
       hls.attachMedia(videoRef.current);
-    } else if (videoRef.current && videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
+    } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
       videoRef.current.src = src;
     }
   }, [src]);
 
   return (
-    <section id={id} className={`relative min-h-[600px] w-full flex items-center justify-center overflow-hidden py-24 ${className}`}>
+    <section 
+      id={id} 
+      className={`relative h-[600px] md:h-[800px] overflow-hidden flex flex-col items-center justify-center px-6 transition-all duration-700 ${
+        fullWidth ? "w-full" : "max-w-7xl mx-auto rounded-[32px] md:rounded-[48px] my-12 md:my-20"
+      } ${className}`}
+    >
       {/* HLS Video Background */}
       <video
         ref={videoRef}
@@ -34,7 +49,8 @@ export const VideoSection = ({
         loop
         muted
         playsInline
-        className={`absolute inset-0 w-full h-full object-cover z-0 ${desaturated ? "filter saturate-0" : ""}`}
+        className={`absolute inset-0 w-full h-full object-cover z-0 ${desaturated ? "filter saturate-0" : ""} ${rotated ? "rotate-180" : ""} ${videoClassName}`}
+        style={{ objectPosition }}
       />
 
       {/* Overlays */}

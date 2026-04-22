@@ -53,7 +53,10 @@ function App() {
 
         <VideoSection 
           id="contact"
-          src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8"
+          src="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8"
+          fullWidth={false}
+          rotated={true}
+          videoClassName="md:object-[center_20%]"
           title="Let's build something together."
           subtext="Available for freelance opportunities and full-time positions. Let's discuss how my design process can add value to your next project."
           buttons={[
