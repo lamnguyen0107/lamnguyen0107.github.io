@@ -7,8 +7,13 @@ export const Navbar = () => {
     <nav className="fixed top-4 md:top-6 left-0 right-0 z-50 px-4 md:px-8 lg:px-16 flex items-center justify-between pointer-events-none">
       {/* Left: Logo */}
       <div className="flex-1 flex justify-start">
-        <div className="pointer-events-auto font-heading italic text-xl md:text-2xl text-white tracking-tighter cursor-pointer">
-          LN.
+        <div className="pointer-events-auto flex items-center gap-1.5 md:gap-2 cursor-pointer group">
+          <div className="w-9 h-9 md:w-11 md:h-11 flex items-center justify-center">
+            <img src="/assets/avatar.png" alt="Lam Nguyen" className="w-full h-full object-contain" />
+          </div>
+          <span className="font-heading italic text-lg md:text-xl text-white tracking-tight leading-none">
+            Lam Nguyen
+          </span>
         </div>
       </div>
 
