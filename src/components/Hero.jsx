@@ -33,7 +33,7 @@ export const Hero = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="liquid-glass rounded-full px-1 py-1 flex items-center gap-3 pr-4 mb-4"
+            className="liquid-glass backdrop-blur-md rounded-full px-1 py-1 flex items-center gap-3 pr-4 mb-4"
           >
             <span className="bg-green-500 text-black rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
@@ -75,7 +75,7 @@ export const Hero = () => {
             <a
               href="#work"
               onMouseEnter={playHoverSound}
-              className="liquid-glass-strong rounded-full px-8 py-4 flex items-center gap-2 text-white font-semibold hover:scale-105 transition-transform group shadow-xl"
+              className="liquid-glass-strong backdrop-blur-xl rounded-full px-8 py-4 flex items-center gap-2 text-white font-semibold hover:scale-105 transition-transform group shadow-xl"
             >
               View My Work
               <motion.div
@@ -94,7 +94,7 @@ export const Hero = () => {
 
           {/* Tools Bar - Also within pointer-events-auto to allow interaction if needed */}
           <div className="mt-12 w-full flex flex-col items-center pb-8 pt-8 px-4">
-            <div className="liquid-glass rounded-full px-6 py-2 text-[10px] font-body text-white/40 mb-10 uppercase tracking-[0.2em] border border-white/5 shadow-sm text-center">
+            <div className="liquid-glass backdrop-blur-md rounded-full px-6 py-2 text-[10px] font-body text-white/40 mb-10 uppercase tracking-[0.2em] border border-white/5 shadow-sm text-center">
               Top Tools I Use
             </div>
             <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-x-2 gap-y-8 md:gap-x-10 lg:gap-20 opacity-50 grayscale saturate-0 w-full max-w-6xl">

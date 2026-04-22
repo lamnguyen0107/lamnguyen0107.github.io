@@ -82,7 +82,7 @@ export const VideoSection = ({
                 className={`rounded-full px-8 py-3.5 font-medium transition-[transform,background-color] duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2 ${
                 btn.type === 'primary' 
                   ? "bg-white/90 backdrop-blur-lg text-black shadow-xl" 
-                  : "liquid-glass-strong text-white border border-white/10 shadow-lg"
+                  : "liquid-glass-strong backdrop-blur-xl text-white border border-white/10 shadow-lg"
               }`}
             >
               {btn.text}

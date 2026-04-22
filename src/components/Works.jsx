@@ -8,7 +8,7 @@ export const Works = () => {
     <section id="work" className="py-24 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-24 md:gap-32">
         <div className="flex flex-col items-center text-center">
-            <div className="liquid-glass rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6">
+            <div className="liquid-glass backdrop-blur-md rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6">
                 Selected Works
             </div>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-12">
@@ -38,14 +38,14 @@ export const Works = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="liquid-glass-strong rounded-full px-6 md:px-8 py-3 md:py-3.5 text-white text-sm md:text-base font-medium inline-flex items-center gap-2 hover:scale-105 transition-transform"
+                className="liquid-glass-strong backdrop-blur-xl rounded-full px-6 md:px-8 py-3 md:py-3.5 text-white text-sm md:text-base font-medium inline-flex items-center gap-2 hover:scale-105 transition-transform"
               >
                 View Project
                 <ArrowUpRight size={18} />
               </a>
             </div>
             <div className="lg:w-1/2 w-full">
-              <div className="liquid-glass rounded-2xl md:rounded-3xl overflow-hidden aspect-video relative group border border-white/5">
+              <div className="liquid-glass backdrop-blur-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-video relative group border border-white/5">
                 <img 
                   src={project.image} 
                   alt={project.title}

@@ -31,7 +31,7 @@ export const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((item, i) => (
-            <div key={i} className="liquid-glass rounded-3xl p-8 md:p-10 flex flex-col h-full border border-white/5">
+            <div key={i} className="liquid-glass backdrop-blur-xl rounded-3xl p-8 md:p-10 flex flex-col h-full border border-white/5">
               <p className="text-white/80 font-body font-light text-base md:text-lg italic leading-relaxed mb-10">
                 "{item.quote}"
               </p>

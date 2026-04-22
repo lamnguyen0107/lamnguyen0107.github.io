@@ -138,7 +138,7 @@ export const FeaturesGrid = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 * i + 0.5, duration: 0.6 }}
               onMouseEnter={playHoverSound}
-              className="liquid-glass rounded-3xl p-8 md:p-10 hover:bg-white/[0.05] transition-[background-color,transform] duration-500 border border-white/5 group shadow-2xl"
+              className="liquid-glass backdrop-blur-xl rounded-3xl p-8 md:p-10 hover:bg-white/[0.05] transition-[background-color,transform] duration-500 border border-white/5 group shadow-2xl"
             >
               <div className="liquid-glass-strong rounded-full w-14 h-14 flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform shadow-lg">
                 <step.icon className="text-white" size={28} />
