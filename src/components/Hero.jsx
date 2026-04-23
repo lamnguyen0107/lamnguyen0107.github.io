@@ -59,7 +59,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-sm md:text-lg text-white/70 font-body font-light leading-relaxed max-w-2xl mb-12"
+            className="text-sm md:text-lg text-white/90 font-body font-normal leading-relaxed max-w-2xl mb-12 drop-shadow-lg [text-shadow:_0_2px_10px_rgb(0_0_0_/_100%)]"
           >
             I design clean, beautiful, and easy-to-use websites and apps.
             Let's work together to turn your ideas into digital products that people actually love.

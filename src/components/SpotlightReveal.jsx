@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useId } from "react";
 import Hls from "hls.js";
 
 export default function SpotlightReveal({
@@ -6,17 +6,24 @@ export default function SpotlightReveal({
   videoSrc,
   isPlaying = true,
   baseRadius = 380,
+  translateY = 5,
+  scale = 1.0,
+  scaleY = 0.95
 }) {
   const NUM_TRAILS = 6;
   const videoRef = useRef(null);
   const containerRef = useRef(null);
   const [spotlightScale, setSpotlightScale] = useState(0);
   const [currentBaseRadius, setCurrentBaseRadius] = useState(baseRadius);
+  const [currentScale, setCurrentScale] = useState(scale);
+  const idPrefix = useId().replace(/:/g, "");
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setCurrentBaseRadius(180);
+      } else if (window.innerWidth < 1024) {
+        setCurrentBaseRadius(280);
       } else {
         setCurrentBaseRadius(baseRadius);
       }
@@ -90,7 +97,7 @@ export default function SpotlightReveal({
       }
 
       for (let i = 0; i < points.length; i++) {
-        const circle = document.getElementById(`trail-${i}`);
+        const circle = document.getElementById(`trail-${idPrefix}-${i}`);
         if (circle) {
           circle.setAttribute("cx", points[i].x.toString());
           circle.setAttribute("cy", points[i].y.toString());
@@ -104,7 +111,7 @@ export default function SpotlightReveal({
       window.removeEventListener("mousemove", handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [idPrefix]);
 
   const pointsRef = useRef(
     Array.from({ length: NUM_TRAILS }, () => ({
@@ -118,7 +125,7 @@ export default function SpotlightReveal({
       <div 
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
         style={{ 
-          transform: `scaleY(0.95) translateY(5%)`, 
+          transform: `scaleY(${scaleY}) scale(${scale}) translateY(${translateY}%)`, 
           width: '100%',
           transformOrigin: 'center center'
         }}
@@ -135,12 +142,12 @@ export default function SpotlightReveal({
           
           <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <radialGradient id="holeGradient">
+              <radialGradient id={`holeGradient-${idPrefix}`}>
                 <stop offset="0%" stopColor="black" stopOpacity="1" />
                 <stop offset="60%" stopColor="black" stopOpacity="0.8" />
                 <stop offset="100%" stopColor="black" stopOpacity="0" />
               </radialGradient>
-              <mask id="spotlight-mask" maskContentUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+              <mask id={`spotlight-mask-${idPrefix}`} maskContentUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                 <rect width="100%" height="100%" fill="white" />
                 <g style={{ opacity: spotlightScale, transition: 'opacity 1.5s ease-out' }}>
                   {Array.from({ length: NUM_TRAILS }).reverse().map((_, reversedIndex) => {
@@ -148,11 +155,11 @@ export default function SpotlightReveal({
                     return (
                       <circle
                         key={`trail-${i}`}
-                        id={`trail-${i}`}
+                        id={`trail-${idPrefix}-${i}`}
                         cx="-1000"
                         cy="-1000"
                         r={currentBaseRadius - i * 35}
-                        fill="url(#holeGradient)"
+                        fill={`url(#holeGradient-${idPrefix})`}
                         opacity={1 - i * 0.15}
                       />
                     );
@@ -160,7 +167,7 @@ export default function SpotlightReveal({
                 </g>
               </mask>
             </defs>
-            <image href={imageSrc} width="100%" height="100%" preserveAspectRatio="xMidYMid slice" mask="url(#spotlight-mask)" />
+            <image href={imageSrc} width="100%" height="100%" preserveAspectRatio="xMidYMid slice" mask={`url(#spotlight-mask-${idPrefix})`} />
           </svg>
         </div>
       </div>

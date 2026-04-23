@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import { playHoverSound } from "../utils/audio";
+import SpotlightReveal from "./SpotlightReveal";
 
 export const VideoSection = ({ 
   src, 
@@ -15,43 +16,76 @@ export const VideoSection = ({
   fullWidth = true,
   objectPosition = "center",
   videoClassName = "",
-  className = "" 
+  className = "",
+  useSpotlight = false,
+  spotlightImage = "",
+  translateY = 5,
+  height = "h-[600px] md:h-[800px]",
+  scale = 1.1
 }) => {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    if (!videoRef.current) return;
+    if (useSpotlight || !videoRef.current) return;
+    const video = videoRef.current;
+    let hls;
 
-    const isMp4 = src.toLowerCase().endsWith('.mp4');
+    const startVideo = () => {
+      video.play().catch(() => {});
+    };
 
-    if (isMp4) {
-      videoRef.current.src = src;
+    if (src.toLowerCase().endsWith('.mp4')) {
+      video.src = src;
     } else if (Hls.isSupported()) {
-      const hls = new Hls();
+      hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: true,
+      });
       hls.loadSource(src);
-      hls.attachMedia(videoRef.current);
-    } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
-      videoRef.current.src = src;
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = src;
+      video.addEventListener("loadedmetadata", startVideo);
     }
-  }, [src]);
+
+    return () => {
+      if (hls) {
+        hls.destroy();
+      }
+      video.removeEventListener("loadedmetadata", startVideo);
+    };
+  }, [src, useSpotlight]);
 
   return (
     <section 
       id={id} 
-      className={`relative h-[600px] md:h-[800px] overflow-hidden flex flex-col items-center justify-center px-6 transition-all duration-700 ${
-        fullWidth ? "w-full" : "max-w-7xl mx-auto rounded-[32px] md:rounded-[48px] my-12 md:my-20"
+      className={`relative ${height} overflow-hidden flex flex-col items-center justify-center px-6 transition-all duration-700 ${
+        fullWidth ? "w-full" : "max-w-7xl mx-auto rounded-[32px] md:rounded-[48px] my-12 md:my-20 shadow-2xl"
       } ${className}`}
     >
-      {/* HLS Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={`absolute inset-0 w-full h-full object-cover z-0 ${desaturated ? "filter saturate-0" : ""} ${rotated ? "rotate-180" : ""} ${videoClassName}`}
-        style={{ objectPosition }}
-      />
+      {/* Background Effect */}
+      {useSpotlight ? (
+        <div className="absolute inset-0 z-0 pointer-events-auto">
+          <SpotlightReveal 
+            videoSrc={src} 
+            imageSrc={spotlightImage} 
+            baseRadius={window.innerWidth < 768 ? 180 : 380}
+            translateY={translateY}
+            scale={scale}
+          />
+        </div>
+      ) : (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover z-0 ${desaturated ? "filter saturate-0" : ""} ${rotated ? "rotate-180" : ""} ${videoClassName}`}
+          style={{ objectPosition }}
+        />
+      )}
 
       {/* Overlays */}
       <div className="absolute inset-x-0 top-0 h-[200px] z-10 pointer-events-none bg-gradient-to-b from-background to-transparent" />
@@ -73,7 +107,7 @@ export const VideoSection = ({
         )}
 
         {subtext && (
-          <p className="text-white/70 font-body font-light text-lg max-w-xl mb-12">
+          <p className="text-white/90 font-body font-normal text-lg max-w-xl mb-12 drop-shadow-lg [text-shadow:_0_2px_10px_rgb(0_0_0_/_100%)]">
             {subtext}
           </p>
         )}

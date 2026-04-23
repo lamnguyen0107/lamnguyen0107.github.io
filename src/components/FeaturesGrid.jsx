@@ -59,12 +59,14 @@ export const FeaturesGrid = () => {
         hls.attachMedia(video);
         hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
       }
-    }
 
-    return () => {
-      if (hls) hls.destroy();
-      if (video) video.removeEventListener("loadedmetadata", () => {});
-    };
+      return () => {
+        if (hls) {
+          hls.destroy();
+        }
+        video.removeEventListener("loadedmetadata", startVideo);
+      };
+    }
   }, [src]);
 
   // Force play when in view if it hasn't started
@@ -140,7 +142,7 @@ export const FeaturesGrid = () => {
               onMouseEnter={playHoverSound}
               className="liquid-glass backdrop-blur-xl rounded-3xl p-8 md:p-10 hover:bg-white/[0.05] transition-[background-color,transform] duration-500 border border-white/5 group shadow-2xl"
             >
-              <div className="liquid-glass-strong rounded-full w-14 h-14 flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform shadow-lg">
+              <div className="liquid-glass-strong rounded-full w-14 h-14 flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500 shadow-lg transform-gpu backface-hidden">
                 <step.icon className="text-white" size={28} />
               </div>
               <h4 className="text-2xl font-heading italic text-white mb-4 leading-tight">{step.title}</h4>
