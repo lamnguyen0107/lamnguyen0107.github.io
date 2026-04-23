@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="bg-background min-h-screen text-foreground selection:bg-white selection:text-black antialiased">
       <Navbar />
-      
+
       <main>
         <Hero />
         <About />
@@ -19,8 +19,8 @@ function App() {
         <FeaturesGrid />
 
         <Works />
-        
-        <VideoSection 
+
+        <VideoSection
           src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8"
           desaturated={true}
           className="my-16 md:my-32"
@@ -37,8 +37,8 @@ function App() {
               { val: "3.0x", lab: "Conversion" },
               { val: "7 days", lab: "Avg Delivery" },
             ].map((stat, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 onMouseEnter={playHoverSound}
                 className="hover:scale-105 transition-transform cursor-default"
               >
@@ -51,9 +51,9 @@ function App() {
 
         <Testimonials />
 
-        <VideoSection 
+        <VideoSection
           id="contact"
-          src="https://stream.mux.com/NESdKcnF7fBpiyaVasBJ3lRnNWrWJd02LlQclSQ72ngs.m3u8"
+          src="https://stream.mux.com/UL74MMgWMu00GjR00JXlfsKlHE02273tUd01astjvg73ZA4.m3u8"
           useSpotlight={true}
           spotlightImage="/assets/base-contact.jpg"
           translateY={10}
@@ -74,7 +74,7 @@ function App() {
               © 2026 Lam Nguyen. All rights reserved. Ho Chi Minh City, VN.
             </div>
             <div className="text-white/40 text-[10px] md:text-xs font-body italic underline-offset-4 decoration-white/20 text-center md:text-right">
-               Digital Design — Crafted with intention
+              Digital Design — Crafted with intention
             </div>
           </div>
         </footer>
