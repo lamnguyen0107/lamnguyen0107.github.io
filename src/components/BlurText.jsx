@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion as Motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 export const BlurText = ({
@@ -51,7 +51,7 @@ export const BlurText = ({
   return (
     <div ref={ref} className={`flex flex-wrap ${className}`}>
       {words.map((word, i) => (
-        <motion.span
+        <Motion.span
           key={i}
           custom={i}
           initial="hidden"
@@ -60,8 +60,9 @@ export const BlurText = ({
           className="inline-block mr-[0.25em]"
         >
           {word}
-        </motion.span>
+        </Motion.span>
       ))}
     </div>
   );
 };
+

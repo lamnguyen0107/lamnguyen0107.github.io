@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion as Motion } from "motion/react";
 import { BlurText } from "./BlurText";
 import { ArrowUpRight } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
@@ -30,7 +30,7 @@ export const Hero = () => {
       {/* Content - z-20 for clear separation from background - Shifted up */}
       <div className="relative z-20 pt-[204px] flex flex-col items-center text-center px-6 max-w-6xl pointer-events-none w-full">
         <div className="pointer-events-auto flex flex-col items-center w-full">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="liquid-glass backdrop-blur-md rounded-full px-1 py-1 flex items-center gap-3 pr-4 mb-4"
@@ -40,7 +40,7 @@ export const Hero = () => {
               Available
             </span>
             <span className="text-xs font-body text-white/80 uppercase tracking-wide">UI/UX Designer in Ho Chi Minh City</span>
-          </motion.div>
+          </Motion.div>
 
           <div className="flex flex-col items-center mb-10 py-10">
             <BlurText
@@ -55,7 +55,7 @@ export const Hero = () => {
             />
           </div>
 
-          <motion.p
+          <Motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -63,9 +63,9 @@ export const Hero = () => {
           >
             I design clean, beautiful, and easy-to-use websites and apps.
             Let's work together to turn your ideas into digital products that people actually love.
-          </motion.p>
+          </Motion.p>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
@@ -78,7 +78,7 @@ export const Hero = () => {
               className="liquid-glass-strong backdrop-blur-xl rounded-full px-8 py-4 flex items-center gap-2 text-white font-semibold hover:scale-105 transition-transform group shadow-xl"
             >
               View My Work
-              <motion.div
+              <Motion.div
                 variants={{
                   initial: { rotate: 0 },
                   hover: { rotate: 90 }
@@ -88,9 +88,9 @@ export const Hero = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
               >
                 <ArrowUpRight size={20} />
-              </motion.div>
+              </Motion.div>
             </a>
-          </motion.div>
+          </Motion.div>
 
           {/* Tools Bar - Also within pointer-events-auto to allow interaction if needed */}
           <div className="mt-12 w-full flex flex-col items-center pb-8 pt-8 px-4">
@@ -110,3 +110,4 @@ export const Hero = () => {
     </section>
   );
 };
+

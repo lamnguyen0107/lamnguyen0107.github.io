@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion as Motion, AnimatePresence } from "motion/react";
 
 const roles = [
   "UI/UX Designer",
@@ -32,12 +32,12 @@ export const About = () => {
           
           <div className="mt-8 relative h-[60px] md:h-[90px] overflow-hidden flex items-center">
             <AnimatePresence mode="wait">
-              <motion.div
+              <Motion.div
                 key={roles[index]}
                 className="flex flex-nowrap whitespace-nowrap tracking-tighter"
               >
                 {roles[index].split("").map((char, i) => (
-                  <motion.span
+                  <Motion.span
                     key={`${roles[index]}-${i}`}
                     initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -54,9 +54,9 @@ export const About = () => {
                     className="text-4xl md:text-6xl font-heading italic text-white"
                   >
                     {char === " " ? "\u00A0" : char}
-                  </motion.span>
+                  </Motion.span>
                 ))}
-              </motion.div>
+              </Motion.div>
             </AnimatePresence>
           </div>
         </div>
@@ -79,3 +79,4 @@ export const About = () => {
     </section>
   );
 };
+

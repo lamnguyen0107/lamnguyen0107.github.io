@@ -15,7 +15,6 @@ export default function SpotlightReveal({
   const containerRef = useRef(null);
   const [spotlightScale, setSpotlightScale] = useState(0);
   const [currentBaseRadius, setCurrentBaseRadius] = useState(baseRadius);
-  const [currentScale, setCurrentScale] = useState(scale);
   const idPrefix = useId().replace(/:/g, "");
 
   useEffect(() => {
@@ -174,3 +173,4 @@ export default function SpotlightReveal({
     </div>
   );
 }
+

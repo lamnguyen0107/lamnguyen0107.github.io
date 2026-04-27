@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
-import { motion, useInView } from "motion/react";
+import { motion as Motion, useInView } from "motion/react";
 import { Search, Scissors, PenTool, Rocket } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
 
@@ -79,7 +79,7 @@ export const FeaturesGrid = () => {
   return (
     <section ref={containerRef} id="process" className="relative py-24 md:py-40 px-6 md:px-16 overflow-hidden min-h-[800px] flex items-center">
       {/* Background Video (HLS) */}
-      <motion.div 
+      <Motion.div 
         initial={{ opacity: 0, scale: 1.05 }}
         whileInView={{ opacity: 0.5, scale: 1 }}
         viewport={{ once: true }}
@@ -94,7 +94,7 @@ export const FeaturesGrid = () => {
           playsInline
           className="w-full h-full object-cover"
         />
-      </motion.div>
+      </Motion.div>
 
       {/* Gradient Overlays */}
       <div className="absolute top-0 left-0 right-0 h-[300px] bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
@@ -103,15 +103,15 @@ export const FeaturesGrid = () => {
 
       <div className="max-w-7xl mx-auto relative z-20 w-full">
         <div className="mb-24 text-center flex flex-col items-center">
-          <motion.div 
+          <Motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="liquid-glass rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6 shadow-xl"
           >
             My Creative Process
-          </motion.div>
-          <motion.h2 
+          </Motion.div>
+          <Motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -119,8 +119,8 @@ export const FeaturesGrid = () => {
             className="text-4xl md:text-5xl lg:text-8xl font-heading italic text-white tracking-tight leading-[0.9] mb-10"
           >
             How I bring ideas to life.
-          </motion.h2>
-          <motion.p 
+          </Motion.h2>
+          <Motion.p 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -128,12 +128,12 @@ export const FeaturesGrid = () => {
             className="text-white/70 font-body font-light max-w-2xl text-center text-sm md:text-lg leading-relaxed"
           >
             I follow a tight, intentional loop designed to turn complex problems into simple, beautiful digital products.
-          </motion.p>
+          </Motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {processSteps.map((step, i) => (
-            <motion.div 
+            <Motion.div 
               key={i} 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -149,10 +149,11 @@ export const FeaturesGrid = () => {
               <p className="text-white/50 font-body font-light text-sm md:text-base leading-relaxed">
                 {step.description}
               </p>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 };
+

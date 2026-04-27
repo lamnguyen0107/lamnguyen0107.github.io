@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion as Motion } from "motion/react";
 import { Download } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
 
@@ -15,7 +15,7 @@ export const Navbar = () => {
           className="pointer-events-auto flex items-center gap-1 cursor-pointer group"
           onClick={scrollToTop}
         >
-          <motion.div 
+          <Motion.div 
             className="w-11 h-11 md:w-13 md:h-13 flex items-center justify-center transform-gpu"
             whileHover={{ 
               rotate: [-3, 3],
@@ -30,7 +30,7 @@ export const Navbar = () => {
             style={{ perspective: 1000, backfaceVisibility: "hidden" }}
           >
             <img src="/assets/avatar.png" alt="Lam Nguyen" className="w-full h-full object-contain drop-shadow-lg" />
-          </motion.div>
+          </Motion.div>
           <span className="font-heading italic text-lg md:text-xl text-white tracking-tight leading-none">
             Lam Nguyen
           </span>
@@ -67,3 +67,4 @@ export const Navbar = () => {
     </nav>
   );
 };
+

@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { projects } from "../data/projects";
 import { ArrowUpRight } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
@@ -60,3 +59,4 @@ export const Works = () => {
     </section>
   );
 };
+
