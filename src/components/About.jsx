@@ -63,16 +63,13 @@ export const About = () => {
 
         <div className="lg:w-1/2 flex flex-col gap-10">
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             Technology moves fast, and the digital landscape is always changing. 
-             But my goal remains simple: to make sense of the noise and design with real <em className="italic text-white">purpose</em>.
+             From a digital media background, I design product experiences by turning messy requirements into clear user flows, interfaces, and handoff-ready systems.
            </p>
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             I focus on understanding human behavior rather than just chasing trends. 
-             My process is built on rapid exploration, bold prototyping, and crafting seamless digital experiences.
+             I work across product screens, landing pages, and design systems, balancing user needs with business goals and implementation constraints.
            </p>
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             At the end of the day, good design should be clean, clear, and fun to use. 
-             That's what I bring to every product I make.
+             I like collaborating closely with developers and stakeholders so ideas move from exploration to useful, polished products.
            </p>
         </div>
       </div>

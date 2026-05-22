@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
@@ -5,9 +6,29 @@ import { VideoSection } from "./components/VideoSection";
 import { Works } from "./components/Works";
 import { FeaturesGrid } from "./components/FeaturesGrid";
 import { Testimonials } from "./components/Testimonials";
+import { ResumePage } from "./components/ResumePage";
 import { playHoverSound } from "./utils/audio";
+import { getCurrentRoute } from "./utils/navigation";
 
 function App() {
+  const [route, setRoute] = useState(getCurrentRoute);
+
+  useEffect(() => {
+    const handleNavigation = () => setRoute(getCurrentRoute());
+
+    window.addEventListener("popstate", handleNavigation);
+    window.addEventListener("app:navigation", handleNavigation);
+
+    return () => {
+      window.removeEventListener("popstate", handleNavigation);
+      window.removeEventListener("app:navigation", handleNavigation);
+    };
+  }, []);
+
+  if (route === "/resume" || route === "/resume/") {
+    return <ResumePage />;
+  }
+
   return (
     <div className="bg-background min-h-screen text-foreground selection:bg-white selection:text-black antialiased">
       <Navbar />

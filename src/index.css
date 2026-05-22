@@ -157,3 +157,61 @@ html.lenis body {
   mask-composite: exclude;
   pointer-events: none;
 }
+
+.resume-page,
+.resume-paper {
+  color-scheme: light;
+}
+
+.resume-paper {
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.resume-display {
+  font-family: var(--font-heading);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    background: #ffffff !important;
+  }
+
+  body {
+    margin: 0 !important;
+    color: #131313 !important;
+  }
+
+  .resume-page {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .resume-page .resume-no-print,
+  .resume-page .resume-mobile-nav {
+    display: none !important;
+  }
+
+  .resume-paper {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    border: 0 !important;
+    max-width: none !important;
+    box-shadow: none !important;
+  }
+}
