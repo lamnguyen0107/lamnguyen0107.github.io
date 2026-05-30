@@ -56,7 +56,7 @@ function App() {
               { val: "10+", lab: "Projects" },
               { val: "98%", lab: "Satisfaction" },
               { val: "3.0x", lab: "Conversion" },
-              { val: "7 days", lab: "Avg Delivery" },
+              { val: "15 days", lab: "Avg Delivery" },
             ].map((stat, i) => (
               <div
                 key={i}

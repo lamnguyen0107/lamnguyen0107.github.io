@@ -24,9 +24,19 @@ const english = {
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
       bullets: [
-        "Design and optimize **end-to-end product experiences**, turning concepts and business requirements into user flows, wireframes, UI designs, and handoff documents.",
-        "Create product landing pages focused on clear messaging, **conversion flow**, and user engagement.",
-        "Actively collaborate with developers and stakeholders to clarify requirements and keep implementation aligned with design intent.",
+        "Turn **business requirements** into **user flows and handoff docs**.",
+        "Create product landing pages with clear messaging and conversion flow.",
+        "Work with developers and stakeholders to keep design intent aligned.",
+      ],
+    },
+    {
+      period: "Mar 2025 - Present",
+      role: "Designer",
+      organization: "Friends of Figma, Ho Chi Minh City",
+      bullets: [
+        "Support **Config Watch** and **design workshops** for the Figma community.",
+        "Design stickers, standees, and other event assets.",
+        "Collaborate with teammates to promote design culture.",
       ],
     },
     {
@@ -34,9 +44,9 @@ const english = {
       role: "Multimedia Designer",
       organization: "DYM Medical Center Vietnam Co., Ltd.",
       bullets: [
-        "Redesigned the DYM website with refreshed UI patterns and a more consistent **design system** across service pages.",
-        "Produced landing pages and digital marketing materials to support campaigns, workshops, and business growth.",
-        "Led visual content support for events, including content planning, photography, and creative direction.",
+        "Redesigned the **DYM website** with a stronger **design system**.",
+        "Produced landing pages and digital assets for campaigns and growth.",
+        "Led event visual content, from planning and photography to creative direction.",
       ],
     },
     {
@@ -44,9 +54,9 @@ const english = {
       role: "UI/UX Designer",
       organization: "MLTech Soft Co., Ltd.",
       bullets: [
-        "Mapped user flows, wireframes, and interactive prototypes for client products including IDP, Lof Kun, and Malto.",
-        "Designed the Happy Lof School feature in the HLS app, helping improve user engagement in the first 3 months.",
-        "Prepared **design system documentation** and digital assets to support cross-functional handoff with developers.",
+        "Mapped **user flows and wireframes** plus **interactive prototypes** for client products.",
+        "Designed Happy Lof School in HLS, supporting user engagement.",
+        "Prepared design system documentation and handoff assets for developers.",
       ],
     },
     {
@@ -54,7 +64,7 @@ const english = {
       role: "Freelance Designer",
       organization: "Self-employment",
       bullets: [
-        "Delivered branding and digital design solutions for startups, including websites, landing pages, and marketing materials.",
+        "Deliver **branding and digital design solutions** for startups, including **websites, landing pages, and marketing materials**.",
       ],
     },
   ],
@@ -89,7 +99,7 @@ const english = {
   ],
   skills: {
     design: ["UI Design", "UX Research", "Prototyping", "Graphic Design", "Design Handoff", "Vibe Coding"],
-    tools: ["Figma", "Rive / LottieFiles", "Notion", "Adobe Creative Suite", "Codex, Claude"],
+    tools: ["Figma", "Notion", "Adobe Creative Suite", "Codex, Claude"],
     languages: ["Vietnamese", "English (ESL)", "Japanese (JLPT N4)"],
   },
 };
@@ -185,7 +195,7 @@ const vietnamese = {
   ],
   skills: {
     design: ["UI Design", "UX Research", "Prototyping", "Graphic Design", "Design Handoff", "Vibe Coding"],
-    tools: ["Figma", "Rive / LottieFiles", "Notion", "Adobe Creative Suite", "Codex, Claude"],
+    tools: ["Figma", "Notion", "Adobe Creative Suite", "Codex, Claude"],
     languages: ["Tiếng Việt", "Tiếng Anh (ESL)", "Tiếng Nhật (JLPT N4)"],
   },
 };
