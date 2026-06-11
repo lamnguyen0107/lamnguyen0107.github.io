@@ -24,7 +24,7 @@ const english = {
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
       bullets: [
-        "Turn **business requirements** into **user flows and handoff docs**.",
+        "Turn business requirements into user flows and handoff docs.",
         "Create product landing pages with clear messaging and conversion flow.",
         "Work with developers and stakeholders to keep design intent aligned.",
       ],
@@ -34,7 +34,7 @@ const english = {
       role: "Designer",
       organization: "Friends of Figma, Ho Chi Minh City",
       bullets: [
-        "Support **Config Watch** and **design workshops** for the Figma community.",
+        "Support Config Watch and design workshops for the Figma community.",
         "Design stickers, standees, and other event assets.",
         "Collaborate with teammates to promote design culture.",
       ],
@@ -44,7 +44,7 @@ const english = {
       role: "Multimedia Designer",
       organization: "DYM Medical Center Vietnam Co., Ltd.",
       bullets: [
-        "Redesigned the **DYM website** with a stronger **design system**.",
+        "Redesigned the DYM website to strengthen brand recognition and improve CMS-based content management.",
         "Produced landing pages and digital assets for campaigns and growth.",
         "Led event visual content, from planning and photography to creative direction.",
       ],
@@ -54,8 +54,8 @@ const english = {
       role: "UI/UX Designer",
       organization: "MLTech Soft Co., Ltd.",
       bullets: [
-        "Mapped **user flows and wireframes** plus **interactive prototypes** for client products.",
-        "Designed Happy Lof School in HLS, supporting user engagement.",
+        "Mapped user flows and wireframes plus interactive prototypes for client products.",
+        "Designed video posting and ranking score features in the Happy Lof School app.",
         "Prepared design system documentation and handoff assets for developers.",
       ],
     },
@@ -64,7 +64,7 @@ const english = {
       role: "Freelance Designer",
       organization: "Self-employment",
       bullets: [
-        "Deliver **branding and digital design solutions** for startups, including **websites, landing pages, and marketing materials**.",
+        "Deliver branding and digital design solutions for startups, including websites, landing pages, and marketing materials.",
       ],
     },
   ],
@@ -130,9 +130,9 @@ const vietnamese = {
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
       bullets: [
-        "Thiết kế và tối ưu **trải nghiệm sản phẩm end-to-end**, chuyển concept và business requirements thành user flow, wireframe, UI design và tài liệu handoff.",
-        "Xây dựng product landing page tập trung vào **thông điệp rõ ràng, conversion flow và user engagement**.",
-        "**Chủ động phối hợp** với developer và stakeholder để làm rõ yêu cầu và giữ triển khai bám sát design intent.",
+        "Thiết kế và tối ưu trải nghiệm sản phẩm end-to-end, chuyển concept và business requirements thành user flow, wireframe, UI design và tài liệu handoff.",
+        "Xây dựng product landing page tập trung vào thông điệp rõ ràng, conversion flow và user engagement.",
+        "Chủ động phối hợp với developer và stakeholder để làm rõ yêu cầu và giữ triển khai bám sát design intent.",
       ],
     },
     {
@@ -140,8 +140,8 @@ const vietnamese = {
       role: "Multimedia Designer",
       organization: "DYM Medical Center Vietnam Co., Ltd.",
       bullets: [
-        "Thiết kế lại website DYM với UI pattern mới và **design system** nhất quán hơn trên các trang dịch vụ.",
-        "Thực hiện landing page và ấn phẩm digital để hỗ trợ **campaign, workshop và tăng trưởng kinh doanh**.",
+        "Thiết kế lại website DYM để tăng nhận diện thương hiệu và cải thiện quản lý nội dung qua CMS.",
+        "Thực hiện landing page và ấn phẩm digital để hỗ trợ campaign, workshop và tăng trưởng kinh doanh.",
         "Phụ trách hỗ trợ visual content cho sự kiện, bao gồm planning nội dung, chụp ảnh và định hướng sáng tạo.",
       ],
     },
@@ -150,9 +150,9 @@ const vietnamese = {
       role: "UI/UX Designer",
       organization: "MLTech Soft Co., Ltd.",
       bullets: [
-        "Xây dựng **user flow, wireframe và interactive prototype** cho các sản phẩm khách hàng như IDP, Lof Kun và Malto.",
-        "Thiết kế tính năng Happy Lof School trong app HLS, hỗ trợ cải thiện user engagement trong 3 tháng đầu.",
-        "Chuẩn bị **design system documentation** và digital asset để hỗ trợ handoff hiệu quả với developer.",
+        "Xây dựng user flow, wireframe và interactive prototype cho các sản phẩm khách hàng như IDP, Lof Kun và Malto.",
+        "Thiết kế tính năng đăng video và tính điểm xếp hạng trong app Happy Lof School.",
+        "Chuẩn bị design system documentation và digital asset để hỗ trợ handoff hiệu quả với developer.",
       ],
     },
     {
@@ -160,7 +160,7 @@ const vietnamese = {
       role: "Freelance Designer",
       organization: "Tự do",
       bullets: [
-        "Thực hiện **branding và digital design solutions** cho startup, bao gồm website, landing page và tài liệu marketing.",
+        "Thực hiện branding và digital design solutions cho startup, bao gồm website, landing page và tài liệu marketing.",
       ],
     },
   ],

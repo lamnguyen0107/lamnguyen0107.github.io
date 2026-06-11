@@ -69,13 +69,13 @@ export const ResumePage = () => {
   const copy = resume.locales.en;
   const labels = copy.labels;
   const aboutText =
-    "Digital media designer focused on product experiences, user flows, UI direction, and handoff-ready interfaces. I balance user needs, implementation efficiency, and business goals across product screens and landing pages.";
+    "Digital media designer focused on product experiences, user flows, UI direction, and handoff-ready interfaces. I am building toward a stronger product design path, with growth potential in UX strategy, design systems, and AI-assisted workflows. I balance user needs, implementation efficiency, and business goals across product screens and landing pages.";
   const profileTags = ["UI/UX Designer", "Digital Product", "2 years of experience"];
 
   return (
     <div className="resume-page min-h-screen overflow-x-auto bg-[#edece7] px-4 py-5 text-[#131313] selection:bg-[#576132] selection:text-white sm:px-6 md:py-8">
-      <article className="resume-paper relative mx-auto h-[297mm] w-[210mm] overflow-hidden border border-[#deded5] bg-white px-[10mm] pb-[9mm] pt-[7mm] text-[#131313] shadow-[0_24px_80px_rgba(19,19,19,0.12)]">
-        <header className="relative min-h-[52mm]">
+      <article className="resume-paper relative mx-auto h-[297mm] w-[210mm] overflow-hidden border border-[#deded5] bg-white px-[10mm] pb-[5mm] pt-[11mm] text-[#131313] shadow-[0_24px_80px_rgba(19,19,19,0.12)]">
+        <header className="relative min-h-[49mm]">
           <div className="resume-no-print absolute right-0 top-0 z-20 flex items-center justify-end gap-[3.2mm]">
             <button
               type="button"
@@ -148,7 +148,7 @@ export const ResumePage = () => {
           </div>
         </header>
 
-        <main className="grid grid-cols-[1fr_126mm] gap-x-[12mm]">
+        <main className="grid grid-cols-[1fr_126mm] gap-x-[12mm] pt-[1mm]">
           <section className="order-2 min-w-0">
             <section>
               <SectionTitle>Introduction</SectionTitle>
