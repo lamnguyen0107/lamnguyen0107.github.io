@@ -27,6 +27,15 @@ export const projects = [
         description: "Designed the community platform for Ho Chi Minh City's Figma design community with a vibrant visual identity.",
     },
     {
+        id: "noctis-r",
+        title: "Noctis R",
+        category: "Personal Project",
+        meta: "Vibe Coding | 3D Web",
+        url: "https://lamnguyen0107.github.io/3d-car/",
+        image: "/projects/noctis-r/thumbnail.jpg",
+        description: "A personal vibe coding project exploring a cinematic 3D car landing experience with interactive presentation and performance-focused visuals.",
+    },
+    {
         id: "saigon-metro",
         title: "Saigon Metro",
         category: "Mobile App",
