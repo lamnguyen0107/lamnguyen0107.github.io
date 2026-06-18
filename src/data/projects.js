@@ -13,7 +13,7 @@ export const projects = [
         title: "Quy Nhon Sea Resort",
         category: "Website Redesign",
         meta: "UI/UX | Hospitality",
-        url: "https://www.quynhonsearesort.vn/",
+        url: "https://quynhonsearesort.com/",
         image: "/projects/quy-nhon-sea-resort/thumbnail.jpg",
         description: "Redesigned the digital presence of a premium coastal resort. Focused on storytelling through immersive visuals and seamless booking flows.",
     },
