@@ -1,6 +1,7 @@
 import { projects } from "../data/projects";
 import { ArrowUpRight } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
+import { navigateTo } from "../utils/navigation";
 
 export const Works = () => {
   return (
@@ -18,6 +19,8 @@ export const Works = () => {
         {projects.map((project, index) => (
           <div 
             key={project.id}
+            id={`work-${project.slug || project.id}`}
+            data-scroll-center="true"
             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 md:gap-16 lg:gap-24`}
           >
             <div className="lg:w-1/2 w-full">
@@ -32,16 +35,15 @@ export const Works = () => {
               <p className="text-white/60 font-body font-light text-base md:text-lg mb-8 md:mb-12 max-w-lg">
                 {project.description}
               </p>
-              <a 
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => navigateTo(`/project/${project.slug || project.id}`)}
                 onMouseEnter={playHoverSound}
-                className="liquid-glass-strong backdrop-blur-xl rounded-full px-6 md:px-8 py-3 md:py-3.5 text-white text-sm md:text-base font-medium inline-flex items-center gap-2 hover:scale-105 transition-transform"
+                className="group liquid-glass-strong backdrop-blur-xl rounded-full px-6 md:px-8 py-3 md:py-3.5 text-white text-sm md:text-base font-medium inline-flex items-center gap-2 hover:scale-105 transition-transform"
               >
                 View Project
-                <ArrowUpRight size={18} />
-              </a>
+                <ArrowUpRight size={18} className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:rotate-45" />
+              </button>
             </div>
             <div className="lg:w-1/2 w-full">
               <div className="liquid-glass backdrop-blur-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-video relative group border border-white/5">

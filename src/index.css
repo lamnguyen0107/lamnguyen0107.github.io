@@ -56,6 +56,7 @@
   --glass-border: rgba(255, 255, 255, 0.25);
   --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
   --glass-blur: 16px;
+  --cursor-arrow: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='s' x='0' y='0' width='32' height='32' color-interpolation-filters='sRGB'%3E%3CfeDropShadow dx='1.2' dy='1.8' stdDeviation='1.35' flood-color='%23000000' flood-opacity='.32'/%3E%3C/filter%3E%3Cpath filter='url(%23s)' d='M6.55 4.75C6.37 4.12 7.03 3.61 7.61 3.91L25.32 13.08C26.01 13.44 25.91 14.46 25.16 14.68L17.38 16.93C17.11 17.01 16.89 17.2 16.78 17.46L13.41 25.06C13.09 25.79 12.04 25.73 11.81 24.96L6.55 4.75Z' fill='%23050608' stroke='white' stroke-width='2.25' stroke-linejoin='round'/%3E%3Cpath d='M8.22 6.37L22.9 13.95L16.12 15.92C15.5 16.1 15.01 16.53 14.75 17.12L11.95 23.45L8.22 6.37Z' fill='%23050608'/%3E%3C/svg%3E");
 }
 
 html.lenis,
@@ -89,6 +90,22 @@ html.lenis body {
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: var(--cursor-arrow) 7 5, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select {
+    cursor: var(--cursor-arrow) 7 5, pointer;
   }
 }
 

@@ -7,6 +7,7 @@ import { Works } from "./components/Works";
 import { FeaturesGrid } from "./components/FeaturesGrid";
 import { Testimonials } from "./components/Testimonials";
 import { ResumePage } from "./components/ResumePage";
+import { ProjectDetailPage } from "./components/ProjectDetailPage";
 import { playHoverSound } from "./utils/audio";
 import { getCurrentRoute } from "./utils/navigation";
 
@@ -27,6 +28,11 @@ function App() {
 
   if (route === "/resume" || route === "/resume/") {
     return <ResumePage />;
+  }
+
+  const projectMatch = route.match(/^\/project\/([^/]+)\/?$/);
+  if (projectMatch) {
+    return <ProjectDetailPage slug={projectMatch[1]} />;
   }
 
   return (

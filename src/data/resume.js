@@ -20,9 +20,10 @@ const english = {
   },
   experiences: [
     {
-      period: "Mar 2026 - Now",
+      period: "Mar 2026 - Aug 2026",
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
+      type: "Contract",
       bullets: [
         "Turn business requirements into user flows and handoff docs.",
         "Create product landing pages with clear messaging and conversion flow.",
@@ -31,8 +32,9 @@ const english = {
     },
     {
       period: "Mar 2025 - Present",
-      role: "Designer",
+      role: "Designer & Event Logistics",
       organization: "Friends of Figma, Ho Chi Minh City",
+      type: "Community / Freelance",
       bullets: [
         "Support Config Watch and design workshops for the Figma community.",
         "Design stickers, standees, and other event assets.",
@@ -43,6 +45,7 @@ const english = {
       period: "May 2024 - Oct 2025",
       role: "Multimedia Designer",
       organization: "DYM Medical Center Vietnam Co., Ltd.",
+      type: "Full-time",
       bullets: [
         "Redesigned the DYM website to strengthen brand recognition and improve CMS-based content management.",
         "Produced landing pages and digital assets for campaigns and growth.",
@@ -53,6 +56,7 @@ const english = {
       period: "Oct 2023 - Jan 2024",
       role: "UI/UX Designer",
       organization: "MLTech Soft Co., Ltd.",
+      type: "Internship",
       bullets: [
         "Mapped user flows and wireframes plus interactive prototypes for client products.",
         "Designed video posting and ranking score features in the Happy Lof School app.",
@@ -63,6 +67,7 @@ const english = {
       period: "2022 - Present",
       role: "Freelance Designer",
       organization: "Self-employment",
+      type: "Contract / Freelance",
       bullets: [
         "Deliver branding and digital design solutions for startups, including websites, landing pages, and marketing materials.",
       ],
