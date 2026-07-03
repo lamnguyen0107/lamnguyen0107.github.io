@@ -31,7 +31,7 @@ export const projects = [
             },
             {
                 title: "CMS-ready Structure",
-                description: "Planned CMS fields for banners, services, doctors, news, and campaign pages so the internal team can update website content without changing the design system.",
+                description: "Planned CMS fields for banners, services, doctors, news, and campaign pages so the internal team can update content without touching the layout.",
                 image: "/projects/dym-medical-center/detail-03.jpg",
             },
         ],
@@ -68,7 +68,7 @@ export const projects = [
             },
             {
                 title: "Content & Subpage Flow",
-                description: "Designed supporting flows and subpages for dining, resort experiences, wedding events, and contact information so the website can cover more user needs beyond the main room pages.",
+                description: "Designed supporting subpages for dining, resort experiences, wedding events, and contact information so visitors can explore more before booking.",
                 image: "/projects/quy-nhon-sea-resort/detail-03.jpg",
             },
         ],
@@ -100,12 +100,12 @@ export const projects = [
             },
             {
                 title: "Flexible Content Blocks",
-                description: "Prepared reusable UI components for navigation, event cards, merch cards, organizer cards, buttons, and sticker assets so the site can scale with new events and community updates.",
+                description: "Prepared reusable UI components for navigation, event cards, merch cards, organizer cards, buttons, and sticker assets so future updates stay consistent.",
                 image: "/projects/friends-of-figma-hcmc/detail-03.jpg",
             },
             {
                 title: "Figma Site & Make",
-                description: "Turned the Figma design into a real published website using Figma Site and Make, then organized the live pages for home, merch, events, and community updates.",
+                description: "Tested Figma Site and Make to publish the design, then documented the workflow as practical guidance for the Config Watch session.",
                 image: "/projects/friends-of-figma-hcmc/detail-02.jpg",
             },
         ],

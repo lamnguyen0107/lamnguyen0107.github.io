@@ -240,7 +240,7 @@ Detail section 3 title:
 CMS-ready Structure
 
 Detail section 3 description:
-Planned CMS fields for banners, services, doctors, news, and campaign pages so the internal team can update website content without changing the design system.
+Planned CMS fields for banners, services, doctors, news, and campaign pages so the internal team can update content without touching the layout.
 
 ### Quy Nhon Sea Resort
 
@@ -296,7 +296,7 @@ Detail section 3 title:
 Content & Subpage Flow
 
 Detail section 3 description:
-Designed supporting flows and subpages for dining, resort experiences, wedding events, and contact information so the website can cover more user needs beyond the main room pages.
+Designed supporting subpages for dining, resort experiences, wedding events, and contact information so visitors can explore more before booking.
 
 ### Friends of Figma HCMC
 
@@ -346,13 +346,13 @@ Detail section 2 title:
 Flexible Content Blocks
 
 Detail section 2 description:
-Prepared reusable UI components for navigation, event cards, merch cards, organizer cards, buttons, and sticker assets so the site can scale with new events and community updates.
+Prepared reusable UI components for navigation, event cards, merch cards, organizer cards, buttons, and sticker assets so future updates stay consistent.
 
 Detail section 3 title:
 Figma Site & Make
 
 Detail section 3 description:
-Turned the Figma design into a real published website using Figma Site and Make, then organized the live pages for home, merch, events, and community updates.
+Tested Figma Site and Make to publish the design, then documented the workflow as practical guidance for the Config Watch session.
 
 ### Noctis R
 
@@ -423,6 +423,9 @@ A UX case study for a metro app focused on route planning, station information, 
 
 Live link:
 None. This is a study project, not a live website.
+
+Visibility:
+Hidden temporarily.
 
 Tagline:
 Transit UX case study
