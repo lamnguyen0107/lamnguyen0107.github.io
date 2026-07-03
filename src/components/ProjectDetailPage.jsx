@@ -11,7 +11,7 @@ const ProjectMeta = ({ label, value }) => (
 );
 
 export const ProjectDetailPage = ({ slug }) => {
-  const project = projects.find((item) => item.slug === slug || item.id === slug);
+  const project = projects.find((item) => !item.hidden && (item.slug === slug || item.id === slug));
   const showTopVisit = project?.showTopVisit !== false;
 
   if (!project) {
@@ -87,7 +87,7 @@ export const ProjectDetailPage = ({ slug }) => {
             {project.summary}
           </p>
 
-          <div className="mt-14 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-4 md:gap-12">
+          <div className="mt-14 grid grid-cols-1 gap-x-5 gap-y-8 border-t border-white/10 pt-8 min-[360px]:grid-cols-2 md:grid-cols-4 md:gap-12">
             <ProjectMeta label="Platform" value={project.platform} />
             <ProjectMeta label="Industry" value={project.industry} />
             <ProjectMeta label="Collaboration" value={project.collaboration} />
@@ -98,7 +98,7 @@ export const ProjectDetailPage = ({ slug }) => {
         <section className="mb-24 md:mb-32">
           <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:rounded-3xl">
             <img
-              src={project.image}
+              src={project.detailHeroImage || project.image}
               alt={`${project.title} thumbnail`}
               className="aspect-video h-full w-full object-cover"
             />
@@ -136,22 +136,24 @@ export const ProjectDetailPage = ({ slug }) => {
           ))}
         </section>
 
-        <section className="mt-24 flex flex-col items-start justify-between gap-8 border-t border-white/10 pt-10 md:mt-32 md:flex-row md:items-center">
-          <div>
-            <p className="font-body text-sm uppercase tracking-widest text-white/35">Live project</p>
-            <h2 className="mt-3 font-heading text-4xl font-normal italic leading-none tracking-normal text-white md:text-5xl">{project.title}</h2>
-          </div>
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseEnter={playHoverSound}
-            className="group liquid-glass-strong inline-flex items-center gap-2 rounded-full px-6 py-3 font-body text-sm font-medium text-white transition hover:scale-105"
-          >
-            Visit Live Project
-            <ArrowUpRight size={18} className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:rotate-45" />
-          </a>
-        </section>
+        {showTopVisit ? (
+          <section className="mt-24 flex flex-col items-start justify-between gap-8 border-t border-white/10 pt-10 md:mt-32 md:flex-row md:items-center">
+            <div>
+              <p className="font-body text-sm uppercase tracking-widest text-white/35">Live project</p>
+              <h2 className="mt-3 font-heading text-4xl font-normal italic leading-none tracking-normal text-white md:text-5xl">{project.title}</h2>
+            </div>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={playHoverSound}
+              className="group liquid-glass-strong inline-flex items-center gap-2 rounded-full px-6 py-3 font-body text-sm font-medium text-white transition hover:scale-105"
+            >
+              Visit Live Project
+              <ArrowUpRight size={18} className="transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:rotate-45" />
+            </a>
+          </section>
+        ) : null}
       </main>
     </div>
   );

@@ -52,7 +52,7 @@ function App() {
           desaturated={true}
           className="my-16 md:my-32"
           badge="Momentum"
-          title="Consistently creating value."
+          title="Designing useful product screens."
         />
 
         {/* Stats Card Overlay (Adjusted for Junior Designer) */}
@@ -62,7 +62,7 @@ function App() {
               { val: "10+", lab: "Projects" },
               { val: "98%", lab: "Satisfaction" },
               { val: "3.0x", lab: "Conversion" },
-              { val: "15 days", lab: "Avg Delivery" },
+              { val: "20 days", lab: "Avg Delivery" },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -86,8 +86,8 @@ function App() {
           translateY={10}
           height="h-[1000px]"
           fullWidth={true}
-          title="Let's build something together."
-          subtext="Available for freelance opportunities and full-time positions. Let's discuss how my design process can add value to your next project."
+          title="Let's work together."
+          subtext="Available for freelance and full-time UI/UX roles. I can help with user flows, wireframes, UI design, prototypes, and handoff."
           buttons={[
             { text: "Send Email", href: "mailto:lamnguyen19417@gmail.com", type: "primary" },
             { text: "My LinkedIn", href: "https://linkedin.com/in/lamnguyen0107", type: "secondary" }
@@ -98,10 +98,10 @@ function App() {
         <footer className="py-12 px-6 md:px-16 border-t border-white/10 bg-background relative z-10">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="text-white/40 text-[10px] md:text-xs font-body">
-              © 2026 Lam Nguyen. All rights reserved. Ho Chi Minh City, VN.
+              (c) 2026 Lam Nguyen. All rights reserved. Ho Chi Minh City, VN.
             </div>
             <div className="text-white/40 text-[10px] md:text-xs font-body italic underline-offset-4 decoration-white/20 text-center md:text-right">
-              Digital Design — Crafted with intention
+              UI/UX Design - Websites, apps, and product screens
             </div>
           </div>
         </footer>

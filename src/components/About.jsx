@@ -63,13 +63,13 @@ export const About = () => {
 
         <div className="lg:w-1/2 flex flex-col gap-10">
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             From a digital media background, I design product experiences by turning messy requirements into clear user flows, interfaces, and handoff-ready systems.
+             I am a UI/UX Designer with a Digital Media background. I turn project requirements into clear user flows, wireframes, UI screens, and prototypes.
            </p>
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             I work across product screens, landing pages, and design systems, balancing user needs with business goals and implementation constraints.
+             I work on websites, landing pages, and mobile app concepts. My focus is making information easy to understand and screens easy to use.
            </p>
            <p className="text-base md:text-lg text-white/70 font-body font-light leading-relaxed">
-             I like collaborating closely with developers and stakeholders so ideas move from exploration to useful, polished products.
+             I also work closely with developers and stakeholders to prepare clean handoff files and keep the final product close to the design.
            </p>
         </div>
       </div>

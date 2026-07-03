@@ -74,8 +74,8 @@ export const ResumePage = () => {
   const copy = resume.locales.en;
   const labels = copy.labels;
   const aboutText =
-    "Digital media designer focused on product experiences, user flows, UI direction, and handoff-ready interfaces. I am building toward a stronger product design path, with growth potential in UX strategy, design systems, and AI-assisted workflows. I balance user needs, implementation efficiency, and business goals across product screens and landing pages.";
-  const profileTags = ["UI/UX Designer", "Digital Product", "2 years of experience"];
+    "UI/UX Designer with a Digital Media background. I design websites, landing pages, and app screens by turning requirements into user flows, wireframes, prototypes, and clean UI designs. I work with teams to make products simple, clear, and easy to hand off to developers.";
+  const profileTags = ["UI/UX Designer", "Product Mindset", "2+ years of experience"];
 
   return (
     <div className="resume-page min-h-screen overflow-x-auto bg-[#edece7] px-4 py-5 text-[#131313] selection:bg-[#576132] selection:text-white sm:px-6 md:py-8">

@@ -7,23 +7,23 @@ import { playHoverSound } from "../utils/audio";
 const processSteps = [
   {
     icon: Search,
-    title: "1. Research",
-    description: "Deep diving into the problem, understanding user behavior, and finding the 'why' before the 'what'.",
+    title: "1. Understand",
+    description: "Read the brief, check user needs, and clarify the main problem before designing screens.",
   },
   {
     icon: Scissors,
-    title: "2. Abstract",
-    description: "Cutting through the noise. I strip away the unnecessary to focus on the core value of your product.",
+    title: "2. User Flow",
+    description: "Map the user journey and wireframes so the structure is simple and easy to follow.",
   },
   {
     icon: PenTool,
-    title: "3. Design",
-    description: "Crafting a clean, intentional interface that feels natural and looks premium across all devices.",
+    title: "3. UI Design",
+    description: "Create clean layouts, components, and responsive screens in Figma.",
   },
   {
     icon: Rocket,
-    title: "4. Ship & Refine",
-    description: "Iterating fast, testing with real users, and polishing until the output is ready to make an impact.",
+    title: "4. Prototype & Handoff",
+    description: "Build prototypes, update details from feedback, and prepare files for developers.",
   },
 ];
 
@@ -109,7 +109,7 @@ export const FeaturesGrid = () => {
             viewport={{ once: true }}
             className="liquid-glass rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6 shadow-xl"
           >
-            My Creative Process
+            My Design Process
           </Motion.div>
           <Motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -118,7 +118,7 @@ export const FeaturesGrid = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-4xl md:text-5xl lg:text-8xl font-heading italic text-white tracking-tight leading-[0.9] mb-10"
           >
-            How I bring ideas to life.
+            How I design products.
           </Motion.h2>
           <Motion.p 
             initial={{ opacity: 0 }}
@@ -127,7 +127,7 @@ export const FeaturesGrid = () => {
             transition={{ delay: 0.4, duration: 1 }}
             className="text-white/70 font-body font-light max-w-2xl text-center text-sm md:text-lg leading-relaxed"
           >
-            I follow a tight, intentional loop designed to turn complex problems into simple, beautiful digital products.
+            I use a simple workflow to move from requirements to wireframes, UI screens, prototypes, and handoff.
           </Motion.p>
         </div>
 

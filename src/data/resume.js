@@ -1,7 +1,7 @@
 const english = {
   title: "UI/UX Designer",
   summary:
-    "Passionate UI/UX Designer with a strong focus on creating simple, effective, and user-friendly digital experiences. I enjoy working across the full product lifecycle, from idea to final product, and collaborating with teams to build solutions that balance user needs and business goals.",
+    "UI/UX Designer with experience in websites, landing pages, and mobile app concepts. With a Digital Media and Multimedia Design background, I turn requirements into clear user flows, wireframes, prototypes, and clean UI designs.",
   labels: {
     portfolio: "Portfolio",
     print: "Print",
@@ -25,9 +25,9 @@ const english = {
       organization: "Prime Commerce Asia Co., Ltd.",
       type: "Contract",
       bullets: [
-        "Turn business requirements into user flows and handoff docs.",
-        "Create product landing pages with clear messaging and conversion flow.",
-        "Work with developers and stakeholders to keep design intent aligned.",
+        "Improved the design system and provided design.md for consistent UI handoff.",
+        "Tested and fixed UI/UX issues across screens, flows, and interactions.",
+        "Applied AI-assisted workflows for landing pages and faster iteration.",
       ],
     },
     {
@@ -36,9 +36,9 @@ const english = {
       organization: "Friends of Figma, Ho Chi Minh City",
       type: "Community / Freelance",
       bullets: [
-        "Support Config Watch and design workshops for the Figma community.",
-        "Design stickers, standees, and other event assets.",
-        "Collaborate with teammates to promote design culture.",
+        "Support design workshops and events for Friends of Figma HCMC.",
+        "Design stickers, standees, social posts, and event assets.",
+        "Prepare content with the team to promote local design activities.",
       ],
     },
     {
@@ -47,9 +47,9 @@ const english = {
       organization: "DYM Medical Center Vietnam Co., Ltd.",
       type: "Full-time",
       bullets: [
-        "Redesigned the DYM website to strengthen brand recognition and improve CMS-based content management.",
-        "Produced landing pages and digital assets for campaigns and growth.",
-        "Led event visual content, from planning and photography to creative direction.",
+        "Redesigned DYM website pages, UI layout, and CMS content structure.",
+        "Created landing pages and digital assets for campaigns and workshops.",
+        "Supported event visuals, including content planning, photography, and design direction.",
       ],
     },
     {
@@ -58,9 +58,9 @@ const english = {
       organization: "MLTech Soft Co., Ltd.",
       type: "Internship",
       bullets: [
-        "Mapped user flows and wireframes plus interactive prototypes for client products.",
-        "Designed video posting and ranking score features in the Happy Lof School app.",
-        "Prepared design system documentation and handoff assets for developers.",
+        "Created user flows, wireframes, and prototypes for client products.",
+        "Designed video posting and ranking features for Happy Lof School.",
+        "Prepared design system notes and handoff assets for developers.",
       ],
     },
     {
@@ -135,9 +135,9 @@ const vietnamese = {
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
       bullets: [
-        "Thiết kế và tối ưu trải nghiệm sản phẩm end-to-end, chuyển concept và business requirements thành user flow, wireframe, UI design và tài liệu handoff.",
-        "Xây dựng product landing page tập trung vào thông điệp rõ ràng, conversion flow và user engagement.",
-        "Chủ động phối hợp với developer và stakeholder để làm rõ yêu cầu và giữ triển khai bám sát design intent.",
+        "Cải tiến design system và tạo design.md để developer follow, giúp UI nhất quán hơn giữa các màn hình.",
+        "Test và sửa các lỗi UI/UX liên quan đến layout, user flow và interaction trước khi handoff.",
+        "Nghiên cứu và áp dụng workflow có sử dụng AI để hỗ trợ thiết kế landing page và iterate sản phẩm nhanh hơn.",
       ],
     },
     {

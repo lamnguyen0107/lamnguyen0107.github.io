@@ -4,6 +4,8 @@ import { playHoverSound } from "../utils/audio";
 import { navigateTo } from "../utils/navigation";
 
 export const Works = () => {
+  const visibleProjects = projects.filter((project) => !project.hidden);
+
   return (
     <section id="work" className="py-24 md:py-32 px-6 md:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-24 md:gap-32">
@@ -12,11 +14,11 @@ export const Works = () => {
                 Selected Works
             </div>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-12">
-                Crafted with intention.
+                UI/UX projects I have worked on.
             </h2>
         </div>
 
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <div 
             key={project.id}
             id={`work-${project.slug || project.id}`}
