@@ -7,7 +7,7 @@ export const Works = () => {
   const visibleProjects = projects.filter((project) => !project.hidden);
 
   return (
-    <section id="work" className="px-6 pb-12 pt-24 md:px-16 md:pb-16 md:pt-32 overflow-hidden">
+    <section id="work" className="px-6 pb-0 pt-24 md:px-16 md:pb-0 md:pt-32 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-24 md:gap-32">
         <div className="flex flex-col items-center text-center">
             <div className="liquid-glass backdrop-blur-md rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6">

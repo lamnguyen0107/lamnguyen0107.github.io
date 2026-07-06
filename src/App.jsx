@@ -50,7 +50,7 @@ function App() {
         <VideoSection
           src="https://stream.mux.com/NcU3HlHeF7CUL86azTTzpy3Tlb00d6iF3BmCdFslMJYM.m3u8"
           desaturated={true}
-          className="mb-16 mt-8 md:mb-32 md:mt-12"
+          className="mb-16 mt-0 md:mb-28 md:mt-0"
           badge="Momentum"
           title="Designing useful product screens."
         />
