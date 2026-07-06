@@ -5,7 +5,7 @@ const testimonials = [
     role: "CEO, DYM Medical Center",
   },
   {
-    quote: "Lam has a remarkable ability to explore new skills and integrate AI into his workflow. He has become an indispensable part of our design team.",
+    quote: "Lam has a remarkable ability to explore new skills and integrate AI into his workflow. He consistently shares new findings with the team and helps us move design work forward.",
     name: "Quan Nguyen",
     role: "Project Manager, Prime Commerce",
   },

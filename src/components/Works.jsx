@@ -7,7 +7,7 @@ export const Works = () => {
   const visibleProjects = projects.filter((project) => !project.hidden);
 
   return (
-    <section id="work" className="py-24 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section id="work" className="px-6 pb-12 pt-24 md:px-16 md:pb-16 md:pt-32 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col gap-24 md:gap-32">
         <div className="flex flex-col items-center text-center">
             <div className="liquid-glass backdrop-blur-md rounded-full px-4 py-1.5 text-[10px] uppercase tracking-widest font-medium text-white font-body inline-block mb-6">
@@ -48,14 +48,20 @@ export const Works = () => {
               </button>
             </div>
             <div className="lg:w-1/2 w-full">
-              <div className="liquid-glass backdrop-blur-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-video relative group border border-white/5">
+              <button
+                type="button"
+                onClick={() => navigateTo(`/project/${project.slug || project.id}`)}
+                onMouseEnter={playHoverSound}
+                className="liquid-glass group relative aspect-video w-full overflow-hidden rounded-2xl border border-white/5 text-left backdrop-blur-xl transition-transform hover:scale-[1.015] focus:outline-none focus:ring-2 focus:ring-white/30 md:rounded-3xl"
+                aria-label={`View ${project.title} project detail`}
+              >
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              </div>
+              </button>
             </div>
           </div>
         ))}

@@ -1,4 +1,5 @@
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowLeft, ArrowUpRight, Image as ImageIcon } from "lucide-react";
 import { projects } from "../data/projects";
 import { navigateTo } from "../utils/navigation";
 import { playHoverSound } from "../utils/audio";
@@ -10,9 +11,51 @@ const ProjectMeta = ({ label, value }) => (
   </div>
 );
 
+const ProjectImage = ({ src, alt, loading }) => {
+  const [hasError, setHasError] = useState(false);
+
+  if (!src || hasError) {
+    return (
+      <div className="flex aspect-video h-full w-full flex-col items-center justify-center gap-3 bg-white/[0.06] text-white/35">
+        <ImageIcon size={34} strokeWidth={1.5} />
+        <span className="font-body text-xs uppercase tracking-widest">Image placeholder</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className="aspect-video h-full w-full object-cover"
+      loading={loading}
+      onError={() => setHasError(true)}
+    />
+  );
+};
+
+const CaseStudyBlock = ({ title, children, image, noImage = false }) => (
+  <article className="mx-auto w-full max-w-[720px]">
+    <h2 className="font-body text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-[36px]">
+      {title}
+    </h2>
+    <div className="mt-5 w-full font-body text-base leading-relaxed text-white/58 md:text-lg">
+      {children}
+    </div>
+
+    {!noImage ? (
+      <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:rounded-3xl">
+        <ProjectImage src={image} alt={`${title} visual placeholder`} loading="lazy" />
+      </div>
+    ) : null}
+  </article>
+);
+
 export const ProjectDetailPage = ({ slug }) => {
   const project = projects.find((item) => !item.hidden && (item.slug === slug || item.id === slug));
   const showTopVisit = project?.showTopVisit !== false;
+  const caseStudy = project?.caseStudy || {};
+  const hasCaseStudyBlocks = Boolean(caseStudy.challenge || caseStudy.decisions?.length);
 
   if (!project) {
     return (
@@ -97,43 +140,65 @@ export const ProjectDetailPage = ({ slug }) => {
 
         <section className="mb-24 md:mb-32">
           <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:rounded-3xl">
-            <img
+            <ProjectImage
               src={project.detailHeroImage || project.image}
               alt={`${project.title} thumbnail`}
-              className="aspect-video h-full w-full object-cover"
             />
           </div>
         </section>
 
-        <section className="flex flex-col gap-20 md:gap-28">
-          {project.detailSections.map((section, index) => (
-            <article
-              key={section.title}
-              className={`grid gap-8 md:grid-cols-[0.75fr_1.25fr] md:gap-14 ${
-                index % 2 === 1 ? "md:grid-cols-[1.25fr_0.75fr]" : ""
-              }`}
-            >
-              <div className={index % 2 === 1 ? "md:order-2" : ""}>
-                <h2 className="font-body text-2xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-[36px]">
-                  {section.title}
-                </h2>
-                <p className="mt-6 max-w-lg font-body text-base leading-relaxed text-white/55">
-                  {section.description}
-                </p>
-              </div>
+        {hasCaseStudyBlocks ? (
+          <section className="mb-24 flex flex-col gap-20 md:mb-32 md:gap-28">
+            {caseStudy.challenge ? (
+              <CaseStudyBlock
+                title={caseStudy.challengeTitle || "Defining the core challenge"}
+                image={caseStudy.challengeImage}
+              >
+                <p>{caseStudy.challenge}</p>
+              </CaseStudyBlock>
+            ) : null}
 
-              <div className={index % 2 === 1 ? "md:order-1" : ""}>
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                  <img
-                    src={section.image}
-                    alt={`${project.title} - ${section.title}`}
-                    className="aspect-video h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
+            {caseStudy.decisions?.length ? (
+              <CaseStudyBlock
+                title={caseStudy.decisionsTitle || "Shaping the design direction"}
+                image={caseStudy.decisionsImage}
+              >
+                <ul className="list-disc space-y-3 pl-5">
+                  {caseStudy.decisions.map((decision) => (
+                    <li key={decision}>{decision}</li>
+                  ))}
+                </ul>
+              </CaseStudyBlock>
+            ) : null}
+          </section>
+        ) : null}
+
+        <section className="flex flex-col gap-20 md:gap-28">
+          {project.detailSections.map((section) => (
+            <article key={section.title} className="mx-auto w-full max-w-[720px]">
+              <h2 className="font-body text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-[36px]">
+                {section.title}
+              </h2>
+              <p className="mt-5 w-full font-body text-base leading-relaxed text-white/55 md:text-lg">
+                {section.description}
+              </p>
+
+              <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:rounded-3xl">
+                <ProjectImage
+                  src={section.image}
+                  alt={`${project.title} - ${section.title}`}
+                  loading="lazy"
+                />
               </div>
             </article>
           ))}
+        </section>
+
+        <section className="mt-24 md:mt-32">
+          <CaseStudyBlock title="Learning & Outcome" noImage>
+            {caseStudy.learning ? <p>{caseStudy.learning}</p> : null}
+            <p className={caseStudy.learning ? "mt-5" : ""}>{caseStudy.outcome}</p>
+          </CaseStudyBlock>
         </section>
 
         {showTopVisit ? (

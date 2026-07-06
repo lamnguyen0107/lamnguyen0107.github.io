@@ -1,4 +1,4 @@
-# Portfolio Content CMS
+﻿# Portfolio Content CMS
 
 Use this file as the copy source for the portfolio website, project detail pages, and resume page.
 When updating content later, edit the text here first, then ask Codex to sync it into the code.
@@ -147,7 +147,7 @@ Role:
 CEO, DYM Medical Center
 
 Testimonial 2:
-Lam learns fast, uses AI tools well, and works closely with the team to move design work forward.
+Lam explores new skills quickly, integrates AI into his workflow, and consistently shares new findings with the team.
 
 Name:
 Quan Nguyen
@@ -224,23 +224,49 @@ Marketing Team, Developers
 Responsibility:
 UI/UX Design, CMS Structure
 
+Challenge title:
+Reviewing the previous website structure
+
+Challenge:
+Before redesigning the interface, I reviewed the previous website to understand which content should stay, which parts could be simplified, and where users might get lost. The website had many services, doctors, locations, and campaign updates, so the main challenge was turning that information into a calmer and easier structure.
+
+Challenge image:
+/projects/dym-medical-center/old-website.jpg
+
+Design decisions title:
+Turning findings into new sitemap & wireframe
+
+Design decisions:
+- Kept key business content such as services, clinic locations, doctors, news, and contact paths.
+- Removed duplicated or low-priority content from the main flow so patients could scan faster.
+- Rebuilt the sitemap around About, Services, News, and Contact, then planned CMS-ready sections for future updates.
+
+Design decisions image:
+/projects/dym-medical-center/sitemap.jpg
+
+Learning:
+I learned how to work more clearly with a Japanese-led team, especially when explaining design decisions across different communication styles. Prototype demos became important because they helped the client understand flow, content structure, and interaction before development.
+
+Outcome:
+The redesign improved how customers understood DYM's services and helped the team present booking paths more clearly through the website.
+
 Detail section 1 title:
 Brand Recognition
 
 Detail section 1 description:
-Refined the visual direction with DYM colors, clinic imagery, and soft healthcare UI elements to create a more professional and trustworthy first impression.
+Refined the visual direction with DYM colors, clinic imagery, and softer healthcare UI elements. The goal was to make the first impression feel professional while keeping the page approachable for patients.
 
 Detail section 2 title:
 Service Discovery
 
 Detail section 2 description:
-Restructured service and specialty content into scannable cards and sections, helping users understand available care options with less effort.
+Restructured services into clearer groups, cards, and short descriptions. Users could compare care options faster before opening a detailed service page.
 
 Detail section 3 title:
 CMS-ready Structure
 
 Detail section 3 description:
-Planned CMS fields for banners, services, doctors, news, and campaign pages so the internal team can update content without touching the layout.
+Planned repeatable CMS fields for banners, services, doctors, news, and campaigns. This gave the marketing team room to update content while keeping pages visually consistent.
 
 ### Quy Nhon Sea Resort
 
@@ -280,23 +306,49 @@ Client Team, Developers
 Responsibility:
 UI/UX Design, Visual Direction
 
+Challenge title:
+Mapping room selection pain points
+
+Challenge:
+The resort website needed to sell the feeling of the place while still helping visitors make practical booking decisions. The challenge was balancing atmosphere with clear room and service information.
+
+Challenge image:
+/projects/quy-nhon-sea-resort/challenge.png
+
+Design decisions title:
+Turning resort needs into a clearer sitemap
+
+Design decisions:
+- Used large imagery and calm spacing to create trust before asking users to take action.
+- Kept booking cues visible but quiet so the page still feels premium.
+- Separated room, dining, event, and experience content so each decision had its own focused path.
+
+Design decisions image:
+/projects/quy-nhon-sea-resort/sitemap.jpg
+
+Learning:
+I learned how to turn a client's place, mood, and hospitality story into a digital journey. Instead of only showing rooms, the design needed to help visitors feel the resort experience before asking them to book.
+
+Outcome:
+The final direction made the resort easier to explore, with clearer room comparison, service discovery, and supporting pages for dining, events, and contact.
+
 Detail section 1 title:
 Visual Storytelling
 
 Detail section 1 description:
-Used coastal imagery, calm spacing, and resort experience blocks to introduce the location, rooms, restaurants, pool, and beach in one clear flow.
+Used coastal imagery, calm spacing, and resort experience blocks to introduce the location, rooms, restaurant, pool, and beach in a natural browsing order.
 
 Detail section 2 title:
 Room Exploration
 
 Detail section 2 description:
-Designed room cards, room details, and booking inputs so visitors can compare stay options and check availability with less effort.
+Designed room cards, detail sections, and booking inputs so visitors could compare stay options with fewer page jumps.
 
 Detail section 3 title:
 Content & Subpage Flow
 
 Detail section 3 description:
-Designed supporting subpages for dining, resort experiences, wedding events, and contact information so visitors can explore more before booking.
+Designed supporting subpages for dining, resort experiences, wedding events, and contact information. Each page answered a specific question before users moved toward booking.
 
 ### Friends of Figma HCMC
 
@@ -307,7 +359,7 @@ Meta:
 Visual UI | Community
 
 Card description:
-A community website design focused on event discovery, visual identity, and flexible content updates.
+A fast community website experiment focused on visual identity, event content, and Figma-native publishing.
 
 Home thumbnail:
 /projects/friends-of-figma-hcmc/thumbnail.jpg
@@ -322,7 +374,7 @@ Headline:
 Creating a digital home for a local design community.
 
 Summary:
-The website gives Friends of Figma HCMC a recognizable online home for events, workshops, recaps, and community updates.
+This project explored how a local design community could move from visual direction to a publishable website quickly using Figma Site, Figma Make, and reusable UI blocks.
 
 Platform:
 Responsive Website
@@ -336,23 +388,29 @@ Community Team
 Responsibility:
 Web Design, Visual UI
 
+Learning:
+I learned how to use Figma Make and Figma Sites in a real community workflow, not just as experiments. I also learned how important token setup is when the same visual system needs to support event cards, stickers, merch, and future updates.
+
+Outcome:
+The project gave FOF HCMC a more recognizable digital home and a reusable structure for upcoming community activities.
+
 Detail section 1 title:
-Community Identity
+Exploring a Figma-native workflow
 
 Detail section 1 description:
-Built a bright community visual direction using event photos, local stickers, and merch visuals so the website feels close to the Figma HCMC community.
+I used the project to test how quickly a community website could move from layout exploration to a publishable Figma Site. The focus was speed, clarity, and keeping the workflow easy for future organizers.
 
 Detail section 2 title:
-Flexible Content Blocks
+Building reusable community UI
 
 Detail section 2 description:
-Prepared reusable UI components for navigation, event cards, merch cards, organizer cards, buttons, and sticker assets so future updates stay consistent.
+I created reusable blocks for event cards, organizer sections, merch, buttons, and sticker assets so different content types could share one visual system.
 
 Detail section 3 title:
-Figma Site & Make
+Optimizing tokens for repeat tasks
 
 Detail section 3 description:
-Tested Figma Site and Make to publish the design, then documented the workflow as practical guidance for the Config Watch session.
+I tested token usage across colors, spacing, and recurring components so future tasks could be updated faster without rebuilding the same visual decisions.
 
 ### Noctis R
 
@@ -363,7 +421,7 @@ Meta:
 Vibe Coding | 3D Web
 
 Card description:
-An AI-assisted 3D web experiment focused on car animation, cinematic presentation, and vibe coding exploration.
+A quick UI and 3D interaction study exploring cinematic presentation, mood, and AI-assisted front-end iteration.
 
 Detail hero image:
 /projects/noctis-r/detail-hero.jpg
@@ -375,7 +433,7 @@ Headline:
 Exploring 3D car animation through a cinematic web experiment.
 
 Summary:
-This personal project was mainly a vibe coding experiment to explore 3D car visuals, camera movement, dark UI styling, and simple animated sections in the browser.
+This personal project focused on rapid exploration rather than a full UX case study. I used vibe coding to test visual mood, 3D presentation, interface framing, and motion direction in the browser.
 
 Platform:
 Web Experience
@@ -389,26 +447,32 @@ Personal Project
 Responsibility:
 Vibe Coding, UI Direction
 
+Learning:
+I learned how to use vibe coding as a way to explore mood, motion, and front-end interaction quickly. The biggest challenge was balancing visual ambition with performance so the 3D concept still felt smooth.
+
+Outcome:
+The project became a focused experiment in cinematic 3D presentation, simple interface framing, and AI-assisted front-end iteration.
+
 Logo image:
 /projects/noctis-r/logo.png
 
 Detail section 1 title:
-Concept Direction
+Setting a cinematic UI direction
 
 Detail section 1 description:
-Set up the main visual direction with a dark cinematic layout, bold car profile, and simple spec cues to frame the 3D concept clearly.
+I started with a dark interface, bold car profile, and simple spec cues so the page could communicate the concept before users interacted with it.
 
 Detail section 2 title:
-3D Presentation
+Testing 3D presentation states
 
 Detail section 2 description:
-Explored different car angles, lighting, and UI overlays to make the 3D model feel more dramatic without adding too much interface complexity.
+I explored camera angles, lighting, and UI overlays to understand how much visual drama the model could carry without adding too many interface elements.
 
 Detail section 3 title:
-Interaction & Motion
+Balancing motion with performance
 
 Detail section 3 description:
-Tested section changes, simple motion states, and a viewing screen to practice how vibe-coded animation can make a small 3D web concept feel alive.
+I tested section transitions, simple motion states, and a viewing screen while keeping the interface lightweight enough to feel smooth.
 
 ### Saigon Metro
 
@@ -448,6 +512,26 @@ Case Study
 Responsibility:
 UX Research, UI Design
 
+Challenge:
+New metro riders need to make quick decisions around stations, routes, timing, and transfers. The app concept had to reduce confusion in a new transit habit.
+
+Challenge image:
+Placeholder for now.
+
+Design decisions:
+- Prioritized route clarity before secondary transit content.
+- Used simple status patterns for arrivals, station updates, and trip changes.
+- Designed flows around quick decisions made while users are moving.
+
+Design decisions image:
+Placeholder for now.
+
+Learning:
+I learned that transit UX depends heavily on early flow planning. When route steps are missing, small UI details become harder to keep consistent later.
+
+Outcome:
+The case study frames the app around route confidence, station clarity, and real-time information for first-time metro riders.
+
 Logo image:
 /projects/saigon-metro/logo.png
 
@@ -455,19 +539,19 @@ Detail section 1 title:
 Rider Context
 
 Detail section 1 description:
-Mapped key rider needs around station search, travel time, route details, and trip confidence.
+Mapped rider needs around station search, travel time, route details, and trip confidence. This helped define which information should appear first in the mobile flow.
 
 Detail section 2 title:
 Wayfinding Flow
 
 Detail section 2 description:
-Designed a simple route flow that helps users understand where they are, where to go, and what happens next.
+Designed a simple route flow that helps users understand where they are, where to go next, and what changes to expect during a trip.
 
 Detail section 3 title:
 Real-time Clarity
 
 Detail section 3 description:
-Explored UI patterns for arrival times, live status, and station updates without making the screen feel crowded.
+Explored UI patterns for arrival times, live status, and station updates while keeping the screen scannable for riders in motion.
 
 ## Resume
 
@@ -621,3 +705,6 @@ Period:
 2023
 Issuer:
 RMIT University, Vietnam
+
+
+
