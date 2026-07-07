@@ -73,28 +73,28 @@ Intro:
 I use a simple workflow to move from requirements to wireframes, UI screens, prototypes, and handoff.
 
 Step 1 title:
-1. Understand
+1. Research
 
 Step 1 description:
-Read the brief, check user needs, and clarify the main problem before designing screens.
+Read the brief, explore user needs, and define the core problem.
 
 Step 2 title:
-2. User Flow
+2. Abstract
 
 Step 2 description:
-Map the user journey and wireframes so the structure is simple and easy to follow.
+Map flows and wireframes into a simple, easy-to-follow structure.
 
 Step 3 title:
-3. UI Design
+3. Design
 
 Step 3 description:
-Create clean layouts, components, and responsive screens in Figma.
+Create clean layouts, components, and responsive screens with intention.
 
 Step 4 title:
-4. Prototype & Handoff
+4. Ship & Refine
 
 Step 4 description:
-Build prototypes, update details from feedback, and prepare files for developers.
+Build prototypes, collect feedback, and refine the final experience.
 
 ### Works
 

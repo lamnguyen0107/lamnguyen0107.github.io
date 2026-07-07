@@ -1,29 +1,29 @@
 import { useEffect, useRef } from "react";
 import Hls from "hls.js";
 import { motion as Motion, useInView } from "motion/react";
-import { Search, Scissors, PenTool, Rocket } from "lucide-react";
+import { Search, Layers, PenTool, Rocket } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
 
 const processSteps = [
   {
     icon: Search,
-    title: "1. Understand",
-    description: "Read the brief, check user needs, and clarify the main problem before designing screens.",
+    title: "1. Research",
+    description: "Read the brief, explore user needs, and define the core problem.",
   },
   {
-    icon: Scissors,
-    title: "2. User Flow",
-    description: "Map the user journey and wireframes so the structure is simple and easy to follow.",
+    icon: Layers,
+    title: "2. Abstract",
+    description: "Map flows and wireframes into a simple, easy-to-follow structure.",
   },
   {
     icon: PenTool,
-    title: "3. UI Design",
-    description: "Create clean layouts, components, and responsive screens in Figma.",
+    title: "3. Design",
+    description: "Create clean layouts, components, and responsive screens with intention.",
   },
   {
     icon: Rocket,
-    title: "4. Prototype & Handoff",
-    description: "Build prototypes, update details from feedback, and prepare files for developers.",
+    title: "4. Ship & Refine",
+    description: "Build prototypes, collect feedback, and refine the final experience.",
   },
 ];
 
