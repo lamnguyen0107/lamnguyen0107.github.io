@@ -239,7 +239,7 @@ Turning findings into new sitemap & wireframe
 Design decisions:
 - Kept key business content such as services, clinic locations, doctors, news, and contact paths.
 - Removed duplicated or low-priority content from the main flow so patients could scan faster.
-- Rebuilt the sitemap around About, Services, News, and Contact, then planned CMS-ready sections for future updates.
+- Rebuilt the sitemap around core pages and explored homepage wireframes for services, trust signals, branches, and booking CTAs.
 
 Design decisions image:
 /projects/dym-medical-center/sitemap.jpg

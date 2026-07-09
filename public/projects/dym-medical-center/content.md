@@ -6,5 +6,6 @@
 
 ## Description
 - Simplified service structure for faster decisions.
+- Reworked sitemap and early wireframes for clearer service, branch, trust, and booking paths.
 - Improved campaign-to-booking conversion flow.
 
