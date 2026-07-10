@@ -89,7 +89,7 @@ function App() {
           title="Let's work together."
           subtext="Available for freelance and full-time UI/UX roles. I can help with user flows, wireframes, UI design, prototypes, and handoff."
           buttons={[
-            { text: "Send Email", href: "mailto:lamnguyen19417@gmail.com", type: "primary" },
+            { text: "Send Email", href: "mailto:lamnguyen051101@gmail.com", type: "primary" },
             { text: "My LinkedIn", href: "https://linkedin.com/in/lamnguyen0107", type: "secondary" }
           ]}
         />

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import Hls from "hls.js";
 import { playHoverSound } from "../utils/audio";
 import SpotlightReveal from "./SpotlightReveal";
+import { loadHls } from "../utils/loadHls";
 
 export const VideoSection = ({ 
   src, 
@@ -29,6 +29,7 @@ export const VideoSection = ({
     if (useSpotlight || !videoRef.current) return;
     const video = videoRef.current;
     let hls;
+    let disposed = false;
 
     const startVideo = () => {
       video.play().catch(() => {});
@@ -36,20 +37,25 @@ export const VideoSection = ({
 
     if (src.toLowerCase().endsWith('.mp4')) {
       video.src = src;
-    } else if (Hls.isSupported()) {
-      hls = new Hls({
-        enableWorker: true,
-        lowLatencyMode: true,
-      });
-      hls.loadSource(src);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
     } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = src;
       video.addEventListener("loadedmetadata", startVideo);
+    } else {
+      loadHls().then((Hls) => {
+        if (disposed || !Hls.isSupported()) return;
+
+        hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+        });
+        hls.loadSource(src);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
+      });
     }
 
     return () => {
+      disposed = true;
       if (hls) {
         hls.destroy();
       }

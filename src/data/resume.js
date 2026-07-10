@@ -1,4 +1,4 @@
-const english = {
+﻿const english = {
   title: "UI/UX Designer",
   summary:
     "UI/UX Designer with experience in websites, landing pages, and mobile app concepts. With a Digital Media and Multimedia Design background, I turn requirements into clear user flows, wireframes, prototypes, and clean UI designs.",
@@ -25,7 +25,7 @@ const english = {
       organization: "Prime Commerce Asia Co., Ltd.",
       type: "Contract",
       bullets: [
-        "Improved the design system and provided design.md for consistent UI handoff.",
+        "Improved the design system and provided UI guidelines for consistent handoff.",
         "Tested and fixed UI/UX issues across screens, flows, and interactions.",
         "Applied AI-assisted workflows for landing pages and faster iteration.",
       ],
@@ -134,16 +134,29 @@ const vietnamese = {
       period: "03/2026 - Nay",
       role: "UI/UX Designer",
       organization: "Prime Commerce Asia Co., Ltd.",
+      type: "Contract",
       bullets: [
-        "Cải tiến design system và tạo design.md để developer follow, giúp UI nhất quán hơn giữa các màn hình.",
+        "Cải tiến design system và cung cấp UI guideline để handoff nhất quán hơn giữa các màn hình.",
         "Test và sửa các lỗi UI/UX liên quan đến layout, user flow và interaction trước khi handoff.",
         "Nghiên cứu và áp dụng workflow có sử dụng AI để hỗ trợ thiết kế landing page và iterate sản phẩm nhanh hơn.",
+      ],
+    },
+    {
+      period: "03/2025 - Hiện tại",
+      role: "Designer & Event Logistics",
+      organization: "Friends of Figma, Ho Chi Minh City",
+      type: "Community / Freelance",
+      bullets: [
+        "Hỗ trợ workshop và sự kiện thiết kế cho Friends of Figma HCMC.",
+        "Thiết kế sticker, standee, social post và event assets.",
+        "Chuẩn bị nội dung cùng team để quảng bá hoạt động thiết kế tại địa phương.",
       ],
     },
     {
       period: "05/2024 - 10/2025",
       role: "Multimedia Designer",
       organization: "DYM Medical Center Vietnam Co., Ltd.",
+      type: "Full-time",
       bullets: [
         "Thiết kế lại website DYM để tăng nhận diện thương hiệu và cải thiện quản lý nội dung qua CMS.",
         "Thực hiện landing page và ấn phẩm digital để hỗ trợ campaign, workshop và tăng trưởng kinh doanh.",
@@ -154,6 +167,7 @@ const vietnamese = {
       period: "10/2023 - 01/2024",
       role: "UI/UX Designer",
       organization: "MLTech Soft Co., Ltd.",
+      type: "Internship",
       bullets: [
         "Xây dựng user flow, wireframe và interactive prototype cho các sản phẩm khách hàng như IDP, Lof Kun và Malto.",
         "Thiết kế tính năng đăng video và tính điểm xếp hạng trong app Happy Lof School.",
@@ -164,8 +178,9 @@ const vietnamese = {
       period: "2022 - Hiện tại",
       role: "Freelance Designer",
       organization: "Tự do",
+      type: "Contract / Freelance",
       bullets: [
-        "Thực hiện branding và digital design solutions cho startup, bao gồm website, landing page và tài liệu marketing.",
+        "Thực hiện branding và digital design cho startup, bao gồm website, landing page và tài liệu marketing.",
       ],
     },
   ],
@@ -223,3 +238,4 @@ export const resume = {
     vi: vietnamese,
   },
 };
+

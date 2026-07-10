@@ -138,7 +138,7 @@ Headline:
 What my leaders say.
 
 Testimonial 1:
-Lam helped redesign our website with clearer service pages and better user flow for Vietnamese users.
+The website redesign played a key role in increasing our conversion rates and effectively reaching the Vietnamese market. Lam's intuition for local user behavior is exceptional.
 
 Name:
 Ryuji Yamaguchi
@@ -147,7 +147,7 @@ Role:
 CEO, DYM Medical Center
 
 Testimonial 2:
-Lam explores new skills quickly, integrates AI into his workflow, and consistently shares new findings with the team.
+Lam has a remarkable ability to explore new skills and integrate AI into his workflow. He consistently shares new findings with the team and helps us move design work forward.
 
 Name:
 Quan Nguyen
@@ -156,7 +156,7 @@ Role:
 Project Manager, Prime Commerce
 
 Testimonial 3:
-Lam created user flows, wireframes, and prototypes quickly while keeping the UI clear and practical.
+A versatile designer who consistently brings fresh perspectives to our projects at MLtech Soft. His rapid prototyping and design execution are top-tier.
 
 Name:
 Duc Nguyen
@@ -183,6 +183,26 @@ Copyright:
 
 Tagline:
 UI/UX Design - Websites, apps, and product screens
+
+## SEO Metadata
+
+Title:
+Lam Nguyen | UI/UX Designer
+
+Description:
+Portfolio of Lam Nguyen, a UI/UX designer in Ho Chi Minh City designing websites, landing pages, mobile app concepts, prototypes, and developer-ready handoff.
+
+Open Graph Title:
+Lam Nguyen | UI/UX Designer
+
+Open Graph Description:
+Websites, landing pages, mobile app concepts, prototypes, and developer-ready handoff.
+
+Open Graph URL:
+https://lamnguyen0107.github.io/
+
+Open Graph Image:
+https://lamnguyen0107.github.io/assets/Base.jpg
 
 ## Project Detail Pages
 
@@ -601,7 +621,7 @@ UI/UX Designer
 Type:
 Contract
 Bullets:
-- Improved the design system and provided design.md for consistent UI handoff.
+- Improved the design system and provided UI guidelines for consistent handoff.
 - Tested and fixed UI/UX issues across screens, flows, and interactions.
 - Applied AI-assisted workflows for landing pages and faster iteration.
 

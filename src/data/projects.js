@@ -1,4 +1,4 @@
-export const projects = [
+﻿export const projects = [
     {
         id: "dym-medical-center",
         slug: "dym-medical-center",
@@ -110,12 +110,12 @@ export const projects = [
         url: "https://www.fofhcm.com/",
         image: "/projects/friends-of-figma-hcmc/thumbnail.jpg",
         detailHeroImage: "/projects/friends-of-figma-hcmc/detail-hero.jpg",
-        description: "A fast community website experiment focused on visual identity, event content, and Figma-native publishing.",
+        description: "A fast community website experiment focused on visual identity, event content, reusable UI blocks, and Figma-native publishing.",
         logo: "FOF",
         logoImage: "/projects/friends-of-figma-hcmc/logo.png",
         tagline: "Design community platform",
         headline: "Creating a digital home for a local design community.",
-        summary: "This project explored how a local design community could move from visual direction to a publishable website quickly using Figma Site, Figma Make, and reusable UI blocks.",
+        summary: "This project explored how a local design community could move from visual direction to a publishable website quickly using Figma Sites, Figma Make, and reusable UI blocks.",
         platform: "Responsive Website",
         industry: "Community, Design",
         collaboration: "Community Team",
@@ -147,22 +147,22 @@ export const projects = [
         slug: "noctis-r",
         title: "Noctis R",
         category: "Personal Project",
-        meta: "Vibe Coding | 3D Web",
+        meta: "AI-assisted Web | 3D Web",
         url: "https://lamnguyen0107.github.io/3d-car/",
         image: "/projects/noctis-r/thumbnail.jpg",
         detailHeroImage: "/projects/noctis-r/detail-hero.jpg",
         description: "A quick UI and 3D interaction study exploring cinematic presentation, mood, and AI-assisted front-end iteration.",
         logo: "NR",
         logoImage: "/projects/noctis-r/logo.png",
-        tagline: "Personal vibe coding project",
+        tagline: "Personal web experiment",
         headline: "Exploring 3D car animation through a cinematic web experiment.",
-        summary: "This personal project focused on rapid exploration rather than a full UX case study. I used vibe coding to test visual mood, 3D presentation, interface framing, and motion direction in the browser.",
+        summary: "This personal project focused on rapid exploration rather than a full UX case study. I used AI-assisted coding to test visual mood, 3D presentation, interface framing, and motion direction in the browser.",
         platform: "Web Experience",
         industry: "Automotive Concept",
         collaboration: "Personal Project",
-        responsibility: "Vibe Coding, UI Direction",
+        responsibility: "AI-assisted Front-end Exploration, UI Direction",
         caseStudy: {
-            learning: "I learned how to use vibe coding as a way to explore mood, motion, and front-end interaction quickly. The biggest challenge was balancing visual ambition with performance so the 3D concept still felt smooth.",
+            learning: "I learned how to use AI-assisted coding as a way to explore mood, motion, and front-end interaction quickly. The biggest challenge was balancing visual ambition with performance so the 3D concept still felt smooth.",
             outcome: "The project became a focused experiment in cinematic 3D presentation, simple interface framing, and AI-assisted front-end iteration.",
         },
         detailSections: [
@@ -190,7 +190,7 @@ export const projects = [
         category: "Mobile App",
         meta: "UX Case Study | Transit",
         image: "/projects/saigon-metro/thumbnail.jpg",
-        description: "A UX case study for a metro app focused on route planning, station information, and real-time clarity.",
+        description: "A mobile UX case study focused on route planning, station discovery, and real-time clarity for new metro riders.",
         logo: "SM",
         logoImage: "/projects/saigon-metro/logo.png",
         hidden: true,
@@ -231,3 +231,4 @@ export const projects = [
         ],
     },
 ];
+

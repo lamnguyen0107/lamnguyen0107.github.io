@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import Hls from "hls.js";
 import { motion as Motion, useInView } from "motion/react";
 import { Search, Layers, PenTool, Rocket } from "lucide-react";
 import { playHoverSound } from "../utils/audio";
+import { loadHls } from "../utils/loadHls";
 
 const processSteps = [
   {
@@ -35,6 +35,7 @@ export const FeaturesGrid = () => {
 
   useEffect(() => {
     let hls;
+    let disposed = false;
     const video = videoRef.current;
     
     if (video) {
@@ -50,17 +51,22 @@ export const FeaturesGrid = () => {
       if (video.canPlayType("application/vnd.apple.mpegurl")) {
         video.src = src;
         video.addEventListener("loadedmetadata", startVideo);
-      } else if (Hls.isSupported()) {
-        hls = new Hls({
-          enableWorker: true,
-          lowLatencyMode: true,
+      } else {
+        loadHls().then((Hls) => {
+          if (disposed || !Hls.isSupported()) return;
+
+          hls = new Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+          });
+          hls.loadSource(src);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
         });
-        hls.loadSource(src);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, startVideo);
       }
 
       return () => {
+        disposed = true;
         if (hls) {
           hls.destroy();
         }
